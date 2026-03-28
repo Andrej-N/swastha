@@ -98,10 +98,6 @@
             backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
             padding: 1rem 3rem; box-shadow: 0 1px 0 var(--border);
         }
-        nav.menu-open {
-            backdrop-filter: none; -webkit-backdrop-filter: none;
-            background: transparent;
-        }
         .nav-logo {
             display: flex; align-items: center; gap: 0.8rem;
             text-decoration: none; color: var(--ink);
@@ -504,8 +500,12 @@
             }
             .nav-links.open { display: flex; }
             .nav-links a { font-size: 1.2rem; }
-            .nav-toggle { z-index: 1000; }
-            .nav-toggle { display: block; }
+            .nav-toggle { z-index: 1000; display: block; }
+            /* Kill backdrop-filter instantly when menu opens — it creates a containing block that clips fixed children */
+            nav.menu-open {
+                backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+                background: #fdfcf8 !important; transition: none !important;
+            }
             .services-grid { grid-template-columns: 1fr; }
             .showcase-grid { grid-template-columns: 1fr; }
             .showcase-item:nth-child(1), .showcase-item:nth-child(2),
