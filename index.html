@@ -126,6 +126,7 @@
         .nav-toggle {
             display: none; background: none; border: none; cursor: pointer;
             width: 28px; height: 20px; position: relative; z-index: 101;
+            padding: 0; outline: none; -webkit-appearance: none; appearance: none;
         }
         .nav-toggle span {
             display: block; width: 100%; height: 1.5px; background: var(--ink);
@@ -501,6 +502,9 @@
             .nav-links.open { display: flex; }
             .nav-links a { font-size: 1.2rem; }
             .nav-toggle { z-index: 1000; display: block; }
+            .nav-toggle.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+            .nav-toggle.active span:nth-child(2) { opacity: 0; }
+            .nav-toggle.active span:nth-child(3) { bottom: auto; top: 50%; transform: translateY(-50%) rotate(-45deg); }
             /* Kill backdrop-filter instantly when menu opens — it creates a containing block that clips fixed children */
             nav.menu-open {
                 backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
@@ -1020,14 +1024,17 @@ animateCursor();
 // Mobile nav toggle
 const navEl = document.getElementById('mainNav');
 const navLinksEl = document.getElementById('navLinks');
-document.getElementById('navToggle').addEventListener('click', function() {
+const navToggleBtn = document.getElementById('navToggle');
+navToggleBtn.addEventListener('click', function() {
     navLinksEl.classList.toggle('open');
     navEl.classList.toggle('menu-open');
+    navToggleBtn.classList.toggle('active');
 });
 document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => {
         navLinksEl.classList.remove('open');
         navEl.classList.remove('menu-open');
+        navToggleBtn.classList.remove('active');
     });
 });
 
