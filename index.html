@@ -505,8 +505,12 @@
             .showcase-grid { grid-template-columns: 1fr; }
             .showcase-item:nth-child(1), .showcase-item:nth-child(2),
             .showcase-item:nth-child(3), .showcase-item:nth-child(4) { grid-column: 1; grid-row: auto; aspect-ratio: 16/10; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+            .stats { padding: 5rem 1.5rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 400px; }
+            .stat-item { padding: 1.5rem 0.5rem; }
             .stat-item:not(:last-child)::after { display: none; }
+            .stat-number { font-size: 2.5rem; }
+            .stat-label { font-size: 0.65rem; }
             .footer-top { flex-direction: column; gap: 3rem; }
             .footer-cols { gap: 3rem; flex-wrap: wrap; }
             .philosophy, .cta { padding: 6rem 2rem; }
