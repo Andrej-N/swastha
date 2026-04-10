@@ -3,7 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swastha Catering — Nourish. Celebrate. Elevate.</title>
+    <title>Swastha Catering | Healthy Corporate Catering Belgrade | Ketering Beograd</title>
+    <meta name="description" content="Swastha Catering: premium healthy corporate catering in Belgrade, Serbia. Daily office lunches, executive dining, team wellness programs, and event catering. Zdrav ketering za firme u Beogradu.">
+    <meta name="keywords" content="ketering beograd, ketering za firme, korporativni ketering, zdrava ishrana, poslovni ručak, premium ketering, catering belgrade, corporate catering serbia, healthy catering, office lunch delivery, event catering belgrade, dostava hrane za firme, zdravi obroci">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Swastha Catering">
+    <link rel="canonical" href="https://swasthacatering.com/">
+    <link rel="alternate" hreflang="en" href="https://swasthacatering.com/">
+    <link rel="alternate" hreflang="sr" href="https://swasthacatering.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Swastha Catering | Healthy Corporate Catering Belgrade">
+    <meta property="og:description" content="Premium healthy corporate catering in Belgrade. Daily office lunches, executive dining, and event catering.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swasthacatering.com/">
+    <meta property="og:image" content="https://swasthacatering.com/logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="sr_RS">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Swastha Catering | Healthy Corporate Catering Belgrade">
+    <meta name="twitter:description" content="Premium healthy corporate catering in Belgrade, Serbia.">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CateringBusiness",
+        "name": "Swastha Catering",
+        "description": "Premium healthy corporate catering in Belgrade, Serbia. Daily office lunches, executive dining, team wellness programs, and event catering.",
+        "url": "https://swasthacatering.com",
+        "telephone": "+381692726003",
+        "email": "swasthabgd@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Belgrade",
+            "addressCountry": "RS"
+        },
+        "servesCuisine": ["Healthy", "Mediterranean", "Serbian", "International"],
+        "priceRange": "$$",
+        "sameAs": [
+            "https://www.instagram.com/swastha_catering/"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Catering Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Daily Office Lunches",
+                        "description": "Wholesome, balanced meals crafted daily for corporate teams"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Executive Dining",
+                        "description": "Premium culinary experiences for board meetings and executive events"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Team Wellness Programs",
+                        "description": "Comprehensive meal plans for team nutritional wellbeing"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -111,7 +185,7 @@
             font-size: 1.4rem; font-weight: 300;
             letter-spacing: 0.25em; text-transform: uppercase;
         }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
         .nav-links a {
             font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
             text-decoration: none; color: var(--ink); position: relative; font-weight: 400;
@@ -121,6 +195,22 @@
             background: var(--line-color); transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .nav-links a:hover::after { width: 100%; }
+
+        /* Language Switch */
+        .lang-switch {
+            display: flex; align-items: center; gap: 0; border: 1px solid var(--border);
+            border-radius: 2px; overflow: hidden; margin-left: 1rem;
+        }
+        .lang-btn {
+            padding: 0.35rem 0.7rem; font-family: 'Outfit', sans-serif; font-size: 0.68rem;
+            letter-spacing: 0.1em; font-weight: 400; border: none; background: transparent;
+            color: var(--ink); cursor: pointer; transition: all 0.3s ease; text-transform: uppercase;
+        }
+        .lang-btn.active { background: var(--ink); color: var(--bg); }
+
+        /* Nav right mobile container */
+        .nav-right-mobile { display: none; align-items: center; gap: 1rem; }
+        .lang-switch-mobile { display: none; }
 
         /* Mobile menu toggle */
         .nav-toggle {
@@ -501,6 +591,8 @@
             }
             .nav-links.open { display: flex; }
             .nav-links a { font-size: 1.2rem; }
+            .nav-right-mobile { display: flex; }
+            .lang-switch-mobile { display: flex; }
             .nav-toggle { z-index: 1000; display: block; }
             .nav-toggle.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
             .nav-toggle.active span:nth-child(2) { opacity: 0; }
@@ -573,15 +665,27 @@
         <span class="nav-logo-text">Swastha</span>
     </a>
     <ul class="nav-links" id="navLinks">
-        <li><a href="#philosophy">Philosophy</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#showcase">Gallery</a></li>
-        <li><a href="#instagram">Instagram</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="menu.html" data-i18n="nav_menu">Menu</a></li>
+        <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+        <li><a href="#showcase" data-i18n="nav_gallery">Gallery</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        <li>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="sr">SR</button>
+            </div>
+        </li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right-mobile">
+        <div class="lang-switch lang-switch-mobile">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="sr">SR</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
 </nav>
 
 <!-- HERO -->
@@ -596,12 +700,12 @@
         </svg>
     </div>
     <div class="hero-content">
-        <div class="hero-tag" id="heroTag">Corporate Healthy Meal Catering</div>
+        <div class="hero-tag" id="heroTag" data-i18n="hero_tag">Corporate Healthy Meal Catering</div>
         <h1 class="hero-title">
             <span class="line"><span>Swastha</span></span>
             <span class="line"><span style="font-size: 0.28em; letter-spacing: 0.4em; display: inline-block; margin-top: 0.5em; font-weight: 300; opacity: 0.8;">Catering</span></span>
         </h1>
-        <p class="hero-subtitle" id="heroSub">Nourish &nbsp;&middot; &nbsp;Energize &nbsp;&middot; &nbsp;Elevate</p>
+        <p class="hero-subtitle" id="heroSub" data-i18n="hero_sub">Nourish &nbsp;&middot; &nbsp;Energize &nbsp;&middot; &nbsp;Elevate</p>
     </div>
     <div class="hero-scroll-indicator" id="heroScroll">
         <span>Scroll</span>
@@ -620,9 +724,9 @@
 <!-- PHILOSOPHY -->
 <section class="philosophy" id="philosophy">
     <div class="philosophy-inner">
-        <div class="section-label fade-in-up">Our Philosophy</div>
+        <div class="section-label fade-in-up" data-i18n="phil_label">Our Philosophy</div>
         <div class="hr-draw"></div>
-        <p class="philosophy-text" id="philosophyText">
+        <p class="philosophy-text" id="philosophyText" data-i18n="phil_text">
             We believe that great work starts with the right fuel. Our meals are crafted with intention to nourish your team, boost productivity, and foster a healthy, thriving workplace culture.
         </p>
     </div>
@@ -640,9 +744,9 @@
 <!-- SERVICES -->
 <section class="services" id="services">
     <div class="services-header">
-        <div class="section-label fade-in-up">What We Offer</div>
+        <div class="section-label fade-in-up" data-i18n="svc_label">What We Offer</div>
         <div class="hr-draw"></div>
-        <h2 class="services-title fade-in-up">Curated Experiences</h2>
+        <h2 class="services-title fade-in-up" data-i18n="svc_title">Curated Experiences</h2>
     </div>
     <div class="services-grid">
         <div class="service-card">
@@ -655,8 +759,8 @@
                     <ellipse class="icon-path" cx="30" cy="52" rx="8" ry="3" />
                 </svg>
             </div>
-            <h3>Daily Office Lunches</h3>
-            <p>Wholesome, balanced meals crafted daily to keep your team energized and focused throughout the work day.</p>
+            <h3 data-i18n="svc1_title">Daily Office Lunches</h3>
+            <p data-i18n="svc1_desc">Wholesome, balanced meals crafted daily to keep your team energized and focused throughout the work day.</p>
         </div>
         <div class="service-card">
             <div class="service-icon">
@@ -670,8 +774,8 @@
                     <line class="icon-path" x1="40" y1="20" x2="42" y2="14" />
                 </svg>
             </div>
-            <h3>Executive Dining</h3>
-            <p>Premium culinary experiences designed for board meetings, client pitches, and executive retreats.</p>
+            <h3 data-i18n="svc2_title">Executive Dining</h3>
+            <p data-i18n="svc2_desc">Premium culinary experiences designed for board meetings, client pitches, and executive retreats.</p>
         </div>
         <div class="service-card">
             <div class="service-icon">
@@ -684,8 +788,8 @@
                     <path class="icon-path" d="M30,18 C30,12 35,10 30,5" />
                 </svg>
             </div>
-            <h3>Team Wellness Programs</h3>
-            <p>Comprehensive meal plans tailored for your team’s nutritional wellbeing, ensuring peak performance and health.</p>
+            <h3 data-i18n="svc3_title">Team Wellness Programs</h3>
+            <p data-i18n="svc3_desc">Comprehensive meal plans tailored for your team’s nutritional wellbeing, ensuring peak performance and health.</p>
         </div>
     </div>
 </section>
@@ -693,9 +797,9 @@
 <!-- GALLERY / SHOWCASE -->
 <section class="showcase" id="showcase">
     <div class="showcase-header">
-        <div class="section-label fade-in-up">Our Work</div>
+        <div class="section-label fade-in-up" data-i18n="gal_label">Our Work</div>
         <div class="hr-draw"></div>
-        <h2 class="showcase-title fade-in-up">A Taste of Elegance</h2>
+        <h2 class="showcase-title fade-in-up" data-i18n="gal_title">A Taste of Elegance</h2>
     </div>
     <div class="showcase-grid">
         <div class="showcase-item">
@@ -772,10 +876,10 @@
 <!-- TESTIMONIAL -->
 <section class="testimonial">
     <div class="testimonial-inner">
-        <div class="section-label fade-in-up" style="color: var(--gold-light);">Testimonial</div>
+        <div class="section-label fade-in-up" style="color: var(--gold-light);" data-i18n="test_label">Testimonial</div>
         <div class="hr-draw" style="background: var(--gold-light); margin-bottom: 3rem;"></div>
-        <p class="testimonial-quote">"Swastha completely elevated our workplace. The daily healthy lunches keep our team energized and productive. It has been a fantastic addition to our company culture."</p>
-        <p class="testimonial-author">&mdash; Sarah T., HR Director</p>
+        <p class="testimonial-quote" data-i18n="test_quote">"Swastha completely elevated our workplace. The daily healthy lunches keep our team energized and productive. It has been a fantastic addition to our company culture."</p>
+        <p class="testimonial-author" data-i18n="test_author">&mdash; Sarah T., HR Director</p>
         <div class="quote-line"></div>
     </div>
 </section>
@@ -783,9 +887,9 @@
 <!-- INSTAGRAM FEED -->
 <section class="instagram-feed" id="instagram">
     <div class="instagram-feed-header">
-        <div class="section-label fade-in-up">Follow Our Journey</div>
+        <div class="section-label fade-in-up" data-i18n="insta_label">Follow Our Journey</div>
         <div class="hr-draw"></div>
-        <h2 class="instagram-feed-title fade-in-up">From Our Kitchen</h2>
+        <h2 class="instagram-feed-title fade-in-up" data-i18n="insta_title">From Our Kitchen</h2>
         <a href="https://www.instagram.com/swastha_catering/" target="_blank" class="instagram-feed-handle fade-in-up">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5"/>
@@ -848,7 +952,7 @@
     <div class="insta-follow-cta fade-in-up">
         <a href="https://www.instagram.com/swastha_catering/" target="_blank" class="insta-follow-btn">
             <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-            <span>Follow on Instagram</span>
+            <span data-i18n="insta_follow">Follow on Instagram</span>
         </a>
     </div>
 </section>
@@ -864,15 +968,15 @@
 <section class="contact-form-section" id="contact">
     <div class="contact-form-inner">
         <div style="text-align: center;">
-            <div class="section-label fade-in-up">Get in Touch</div>
+            <div class="section-label fade-in-up" data-i18n="contact_label">Get in Touch</div>
             <div class="hr-draw"></div>
-            <h2 class="cta-title fade-in-up" style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem;">Let's Fuel<br>Your Team</h2>
-            <p class="fade-in-up" style="font-size: 0.95rem; color: #5a5550; font-weight: 300; max-width: 500px; margin: 0 auto;">Tell us about your team, and we'll craft a meal plan that fuels productivity and wellbeing.</p>
+            <h2 class="cta-title fade-in-up" style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem;" data-i18n="contact_title">Let's Fuel<br>Your Team</h2>
+            <p class="fade-in-up" style="font-size: 0.95rem; color: #5a5550; font-weight: 300; max-width: 500px; margin: 0 auto;" data-i18n="contact_sub">Tell us about your team, and we'll craft a meal plan that fuels productivity and wellbeing.</p>
         </div>
         <div class="contact-form-layout fade-in-up">
             <div class="contact-form-info">
-                <h3>Reach Out Directly</h3>
-                <p>Have a quick question? Contact us directly and we'll get back to you within 24 hours.</p>
+                <h3 data-i18n="contact_direct_title">Reach Out Directly</h3>
+                <p data-i18n="contact_direct_desc">Have a quick question? Contact us directly and we'll get back to you within 24 hours.</p>
                 <div class="contact-info-item">
                     <svg viewBox="0 0 24 24"><path class="ci-icon" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path class="ci-icon" d="M22 6l-10 7L2 6"/></svg>
                     <a href="mailto:swasthabgd@gmail.com">swasthabgd@gmail.com</a>
@@ -923,9 +1027,9 @@
                         <label for="formTeamSize">Team Size</label>
                         <select id="formTeamSize" name="team_size">
                             <option value="" disabled selected>Select range</option>
-                            <option value="1-20">1 — 20 people</option>
-                            <option value="21-50">21 — 50 people</option>
-                            <option value="51-100">51 — 100 people</option>
+                            <option value="1-20">1 - 20 people</option>
+                            <option value="21-50">21 - 50 people</option>
+                            <option value="51-100">51 - 100 people</option>
                             <option value="100+">100+ people</option>
                         </select>
                     </div>
@@ -934,8 +1038,8 @@
                         <select id="formBudget" name="budget">
                             <option value="" disabled selected>Select range</option>
                             <option value="under-500">Under €500</option>
-                            <option value="500-1500">€500 — €1,500</option>
-                            <option value="1500-5000">€1,500 — €5,000</option>
+                            <option value="500-1500">€500 - €1,500</option>
+                            <option value="1500-5000">€1,500 - €5,000</option>
                             <option value="5000+">€5,000+</option>
                         </select>
                     </div>
@@ -944,7 +1048,7 @@
                     <label for="formMessage">Message</label>
                     <textarea id="formMessage" name="message" rows="4" placeholder="Tell us about your catering needs, dietary requirements, or any questions..."></textarea>
                 </div>
-                <button type="submit" class="form-submit"><span>Send Inquiry</span></button>
+                <button type="submit" class="form-submit"><span data-i18n="form_send">Send Inquiry</span></button>
             </form>
             <div class="form-success" id="formSuccess">
                 <h3>Thank You!</h3>
@@ -962,26 +1066,27 @@
         </div>
         <div class="footer-cols">
             <div class="footer-col">
-                <h4>Navigate</h4>
-                <a href="#philosophy">Philosophy</a>
-                <a href="#services">Services</a>
-                <a href="#showcase">Gallery</a>
-                <a href="#contact">Contact</a>
+                <h4 data-i18n="footer_navigate">Navigate</h4>
+                <a href="#services" data-i18n="nav_services">Services</a>
+                <a href="menu.html" data-i18n="nav_menu">Menu</a>
+                <a href="blog.html" data-i18n="nav_blog">Blog</a>
+                <a href="#showcase" data-i18n="nav_gallery">Gallery</a>
+                <a href="#contact" data-i18n="nav_contact">Contact</a>
             </div>
             <div class="footer-col">
-                <h4>Connect</h4>
+                <h4 data-i18n="footer_connect">Connect</h4>
                 <a href="https://www.instagram.com/swastha_catering/" target="_blank">Instagram</a>
                 <a href="https://wa.me/381692726003" target="_blank">WhatsApp</a>
                 <a href="mailto:swasthabgd@gmail.com">Email</a>
             </div>
             <div class="footer-col">
-                <h4>Reach Us</h4>
+                <h4 data-i18n="footer_reach">Reach Us</h4>
                 <a href="mailto:swasthabgd@gmail.com">swasthabgd@gmail.com</a>
                 <a href="tel:+381692726003">+381 69 272 6003</a>
             </div>
         </div>
     </div>
-    <div class="footer-bottom">&copy; 2026 Swastha Catering. All rights reserved.</div>
+    <div class="footer-bottom">&copy; 2026 Swastha Catering. <span data-i18n="footer_rights">All rights reserved.</span></div>
 </footer>
 
 <!-- WHATSAPP FLOATING BUTTON -->
@@ -1197,9 +1302,9 @@ document.querySelectorAll('.showcase-item').forEach(item => showObs.observe(item
 const philText = document.getElementById('philosophyText');
 const words = philText.textContent.trim().split(/\s+/);
 philText.innerHTML = words.map(w => `<span class="word">${w}</span>`).join(' ');
-const wordEls = philText.querySelectorAll('.word');
 
 function updatePhilWords() {
+    const wordEls = philText.querySelectorAll('.word');
     const rect = philText.getBoundingClientRect();
     const wh = window.innerHeight;
     if (rect.top < wh * 0.7 && rect.top + rect.height > 0) {
@@ -1259,6 +1364,91 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         const t = document.querySelector(this.getAttribute('href'));
         if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+});
+
+// ===== LANGUAGE SWITCH =====
+const translations = {
+    sr: {
+        // Nav
+        nav_services: "Usluge", nav_menu: "Meni", nav_blog: "Blog", nav_gallery: "Galerija", nav_contact: "Kontakt",
+        // Hero
+        hero_tag: "Korporativni Zdrav Ketering",
+        hero_sub: "Hranimo &nbsp;&middot; &nbsp;Energizujemo &nbsp;&middot; &nbsp;Uzdižemo",
+        // Philosophy
+        phil_label: "Naša Filozofija",
+        phil_text: "Verujemo da sjajan rad počinje pravim gorivom. Naši obroci su osmišljeni sa namerom da nahrane vaš tim, povećaju produktivnost i neguju zdravu, naprednu kulturu na radnom mestu.",
+        // Services
+        svc_label: "Šta Nudimo",
+        svc_title: "Osmišljena Iskustva",
+        svc1_title: "Dnevni Poslovni Ručkovi",
+        svc1_desc: "Zdravi, balansirani obroci pripremljeni svakodnevno da vaš tim održe energičnim i fokusiranim tokom radnog dana.",
+        svc2_title: "Egzekutivni Obrok",
+        svc2_desc: "Premium kulinarska iskustva dizajnirana za sastanke uprave, prezentacije klijentima i retreat-ove.",
+        svc3_title: "Programi Timskog Velnesa",
+        svc3_desc: "Sveobuhvatni planovi ishrane prilagođeni nutritivnom blagostanju vašeg tima, osiguravajući vrhunske performanse i zdravlje.",
+        // Gallery
+        gal_label: "Naš Rad",
+        gal_title: "Ukus Elegancije",
+        // Testimonial
+        test_label: "Preporuka",
+        test_quote: "\"Swastha je potpuno podigla naše radno okruženje. Svakodnevni zdravi ručkovi održavaju naš tim energičnim i produktivnim. Bio je to fantastičan dodatak kulturi naše kompanije.\"",
+        test_author: "&mdash; Sara T., HR Direktor",
+        // Instagram
+        insta_label: "Pratite Naš Put",
+        insta_title: "Iz Naše Kuhinje",
+        insta_follow: "Pratite na Instagramu",
+        // Contact
+        contact_label: "Kontaktirajte Nas",
+        contact_title: "Hajde da Nahranimo<br>Vaš Tim",
+        contact_sub: "Recite nam o svom timu, a mi ćemo kreirati plan ishrane koji podstiče produktivnost i blagostanje.",
+        contact_direct_title: "Pišite Nam Direktno",
+        contact_direct_desc: "Imate brzo pitanje? Kontaktirajte nas direktno i javićemo vam se u roku od 24 sata.",
+        form_send: "Pošaljite Upit",
+        // Footer
+        footer_navigate: "Navigacija", footer_connect: "Povežite Se", footer_reach: "Kontaktirajte Nas",
+        footer_rights: "Sva prava zadržana.",
+    }
+};
+
+function setLanguage(lang) {
+    localStorage.setItem('swastha-lang', lang);
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    document.documentElement.lang = lang;
+
+    if (lang === 'sr') {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.dataset.i18n;
+            if (translations.sr[key]) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
+                if (el.tagName === 'OPTION') { el.textContent = translations.sr[key]; return; }
+                if (!el.dataset.enOriginal) el.dataset.enOriginal = el.innerHTML;
+                el.innerHTML = translations.sr[key];
+            }
+        });
+        // Re-init philosophy word reveal after language change
+        reinitPhilosophy();
+    } else {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            if (el.dataset.enOriginal) el.innerHTML = el.dataset.enOriginal;
+        });
+        reinitPhilosophy();
+    }
+}
+
+function reinitPhilosophy() {
+    const philText = document.getElementById('philosophyText');
+    const raw = philText.textContent.trim().split(/\s+/);
+    philText.innerHTML = raw.map(w => `<span class="word">${w}</span>`).join(' ');
+    updatePhilWords();
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('swastha-lang');
+    if (saved && saved !== 'en') setLanguage(saved);
 });
 
 // Contact form handler

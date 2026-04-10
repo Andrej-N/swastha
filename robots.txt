@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://swasthacatering.com/sitemap.xml
+
+# Crawl-delay suggestion for polite crawling
+Crawl-delay: 1

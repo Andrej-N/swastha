@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Swastha Catering - Healthy Corporate Catering Belgrade</title>
+    <meta name="description" content="Explore Swastha Catering's General and Premium menus. Healthy, chef-crafted meals for corporate events, office lunches, and special occasions in Belgrade. Kontaktirajte nas za ponudu.">
+    <meta name="keywords" content="ketering beograd, ketering za firme, korporativni ketering, premium ketering, zdrava ishrana, poslovni ručak, meni ketering, catering belgrade, corporate catering menu, healthy catering serbia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://swasthacatering.com/menu.html">
+    <link rel="alternate" hreflang="en" href="https://swasthacatering.com/menu.html">
+    <link rel="alternate" hreflang="sr" href="https://swasthacatering.com/menu.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Menu | Swastha Catering - Healthy Catering Belgrade">
+    <meta property="og:description" content="Chef-crafted General and Premium menus for corporate events and office dining in Belgrade.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swasthacatering.com/menu.html">
+    <meta property="og:image" content="https://swasthacatering.com/logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Swastha Catering",
+        "description": "Healthy corporate catering and event catering in Belgrade, Serbia.",
+        "servesCuisine": ["Healthy", "Mediterranean", "Serbian"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Belgrade",
+            "addressCountry": "RS"
+        },
+        "telephone": "+381692726003",
+        "email": "swasthabgd@gmail.com",
+        "hasMenu": {
+            "@type": "Menu",
+            "name": "Swastha Catering Menu",
+            "hasMenuSection": [
+                {
+                    "@type": "MenuSection",
+                    "name": "General Menu",
+                    "description": "Wholesome, balanced meals crafted for daily corporate dining."
+                },
+                {
+                    "@type": "MenuSection",
+                    "name": "Premium Menu",
+                    "description": "Elevated culinary experiences for executive events and special occasions."
+                }
+            ]
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        :root {
+            --bg: #fdfcf8;
+            --ink: #1a1612;
+            --line-color: #2d4a22;
+            --line-light: rgba(45,74,34,0.12);
+            --gold: #b8956a;
+            --gold-light: #d4b896;
+            --sage: #7a8c6e;
+            --terracotta: #c4785a;
+            --warm: #e8dfd2;
+            --border: #1a161215;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--gold) var(--bg); }
+        body {
+            background-color: var(--bg); color: var(--ink);
+            font-family: 'Outfit', sans-serif; overflow-x: hidden;
+            font-weight: 300; line-height: 1.7; position: relative;
+        }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 300; }
+
+        /* --- Scroll Progress --- */
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--line-color), var(--gold), var(--sage)); z-index: 9999; width: 0%; }
+
+        /* --- NAV --- */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav.scrolled {
+            background: rgba(253,252,248,0.92);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            padding: 1rem 3rem; box-shadow: 0 1px 0 var(--border);
+        }
+        .nav-logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--ink); }
+        .nav-logo-text { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.25em; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+        .nav-links a {
+            font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
+            text-decoration: none; color: var(--ink); position: relative; font-weight: 400;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+            background: var(--line-color); transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active::after { width: 100%; }
+
+        /* Language Switch */
+        .lang-switch {
+            display: flex; align-items: center; gap: 0; border: 1px solid var(--border);
+            border-radius: 2px; overflow: hidden; margin-left: 1rem;
+        }
+        .lang-btn {
+            padding: 0.35rem 0.7rem; font-family: 'Outfit', sans-serif; font-size: 0.68rem;
+            letter-spacing: 0.1em; font-weight: 400; border: none; background: transparent;
+            color: var(--ink); cursor: pointer; transition: all 0.3s ease; text-transform: uppercase;
+        }
+        .lang-btn.active { background: var(--ink); color: var(--bg); }
+
+        /* Nav right mobile container */
+        .nav-right-mobile { display: none; align-items: center; gap: 1rem; }
+        .lang-switch-mobile { display: none; }
+
+        /* Mobile nav toggle */
+        .nav-toggle {
+            display: none; background: none; border: none; cursor: pointer;
+            width: 28px; height: 20px; position: relative; z-index: 101;
+            padding: 0; outline: none; -webkit-appearance: none; appearance: none;
+        }
+        .nav-toggle span {
+            display: block; width: 100%; height: 1.5px; background: var(--ink);
+            position: absolute; left: 0; transition: all 0.3s ease;
+        }
+        .nav-toggle span:nth-child(1) { top: 0; }
+        .nav-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        .nav-toggle span:nth-child(3) { bottom: 0; }
+
+        /* --- PAGE HERO --- */
+        .page-hero {
+            padding: 12rem 3rem 6rem; text-align: center; position: relative; z-index: 2;
+        }
+        .page-hero-tag {
+            font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase;
+            color: var(--line-color); margin-bottom: 2rem; font-weight: 400;
+        }
+        .page-hero-title {
+            font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 200;
+            line-height: 1.05; letter-spacing: 0.05em; text-transform: uppercase;
+        }
+        .page-hero-sub {
+            font-size: 1.05rem; margin-top: 1.5rem; font-weight: 200;
+            color: #5a5550; max-width: 600px; margin-left: auto; margin-right: auto;
+        }
+
+        /* --- SHARED --- */
+        section { position: relative; z-index: 2; }
+        .section-label {
+            font-size: 0.7rem; letter-spacing: 0.4em; text-transform: uppercase;
+            color: var(--line-color); margin-bottom: 3rem; font-weight: 400;
+        }
+        .hr-draw {
+            width: 60px; height: 1px; background: var(--line-color); margin: 2rem auto;
+            transform: scaleX(0); transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hr-draw.visible { transform: scaleX(1); }
+        .fade-in-up { opacity: 0; transform: translateY(30px); }
+        .fade-in-up.visible { animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- MENU TABS --- */
+        .menu-section { padding: 4rem 3rem 8rem; max-width: 1100px; margin: 0 auto; }
+        .menu-tabs {
+            display: flex; justify-content: center; gap: 0; margin-bottom: 5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .menu-tab {
+            padding: 1.2rem 3rem; font-family: 'Montserrat', sans-serif; font-size: 0.85rem;
+            letter-spacing: 0.2em; text-transform: uppercase; font-weight: 300;
+            border: none; background: transparent; color: #8a8580; cursor: pointer;
+            position: relative; transition: color 0.4s ease;
+        }
+        .menu-tab::after {
+            content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px;
+            background: var(--line-color); transform: scaleX(0); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .menu-tab.active { color: var(--ink); }
+        .menu-tab.active::after { transform: scaleX(1); }
+        .menu-tab:hover { color: var(--ink); }
+
+        /* Menu Content */
+        .menu-content { display: none; }
+        .menu-content.active { display: block; }
+
+        .menu-category { margin-bottom: 4rem; }
+        .menu-category-header {
+            display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem;
+        }
+        .menu-category-icon { width: 40px; height: 40px; flex-shrink: 0; }
+        .menu-category-icon svg { width: 100%; height: 100%; }
+        .menu-category-icon .icon-path { fill: none; stroke: var(--line-color); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+        .menu-category-name {
+            font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+        .menu-category-line { flex: 1; height: 1px; background: var(--border); }
+
+        .menu-items { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 3rem; }
+        .menu-item {
+            padding: 1.5rem 0; border-bottom: 1px solid var(--border);
+            opacity: 0; transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .menu-item.visible { opacity: 1; transform: translateY(0); }
+        .menu-item-name {
+            font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 400;
+            margin-bottom: 0.4rem; letter-spacing: 0.02em;
+        }
+        .menu-item-desc {
+            font-size: 0.85rem; color: #8a8580; line-height: 1.6; font-weight: 300;
+        }
+        .menu-item-tags { display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; }
+        .menu-tag {
+            font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+            padding: 0.25rem 0.6rem; border: 1px solid var(--line-light);
+            color: var(--sage); font-weight: 400; border-radius: 1px;
+        }
+
+        /* --- MENU NOTE --- */
+        .menu-note {
+            text-align: center; padding: 4rem 2rem; margin-top: 2rem;
+            border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+        }
+        .menu-note p {
+            font-size: 0.92rem; color: #8a8580; font-weight: 300; font-style: italic;
+            max-width: 600px; margin: 0 auto;
+        }
+
+        /* --- CONTACT CTA --- */
+        .menu-cta { padding: 8rem 3rem; position: relative; z-index: 2; }
+        .menu-cta-inner { max-width: 1000px; margin: 0 auto; }
+        .menu-cta-header { text-align: center; margin-bottom: 4rem; }
+        .menu-cta-title {
+            font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem;
+        }
+        .menu-cta-sub {
+            font-size: 0.95rem; color: #5a5550; font-weight: 300; max-width: 500px; margin: 0 auto;
+        }
+
+        /* Phone CTA */
+        .phone-cta {
+            display: flex; justify-content: center; gap: 2rem; margin-bottom: 4rem; flex-wrap: wrap;
+        }
+        .phone-btn {
+            display: inline-flex; align-items: center; gap: 0.8rem; padding: 1rem 2.5rem;
+            border: 1px solid var(--line-color); background: transparent; color: var(--line-color);
+            font-family: 'Outfit', sans-serif; font-size: 0.82rem; letter-spacing: 0.15em;
+            text-transform: uppercase; text-decoration: none; cursor: pointer;
+            position: relative; overflow: hidden; transition: all 0.5s ease;
+        }
+        .phone-btn::before {
+            content: ''; position: absolute; inset: 0; background: var(--line-color);
+            transform: translateX(-101%); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .phone-btn:hover { color: var(--bg); }
+        .phone-btn:hover::before { transform: translateX(0); }
+        .phone-btn svg, .phone-btn span { position: relative; z-index: 1; }
+        .phone-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+        .whatsapp-btn { border-color: #25D366; color: #25D366; }
+        .whatsapp-btn::before { background: #25D366; }
+        .whatsapp-btn svg { fill: currentColor; stroke: none; }
+
+        /* Contact Form */
+        .menu-contact-form { max-width: 700px; margin: 0 auto; }
+        .menu-form-title {
+            text-align: center; font-size: 0.7rem; letter-spacing: 0.4em;
+            text-transform: uppercase; color: var(--line-color); margin-bottom: 2rem; font-weight: 400;
+        }
+        .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+        .form-group label {
+            font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+            color: var(--line-color); font-weight: 400;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            background: transparent; border: none; border-bottom: 1px solid var(--border);
+            padding: 0.8rem 0; font-family: 'Outfit', sans-serif; font-size: 0.92rem;
+            font-weight: 300; color: var(--ink); outline: none; transition: border-color 0.3s ease; resize: none;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-bottom-color: var(--line-color); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: #b5b0a8; font-weight: 200; }
+        .form-group select {
+            cursor: pointer; -webkit-appearance: none; appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238a8580' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 0 center;
+        }
+        .form-submit {
+            display: inline-flex; align-items: center; gap: 1rem; padding: 1.1rem 3rem;
+            border: 1px solid var(--ink); background: transparent; color: var(--ink);
+            font-family: 'Outfit', sans-serif; font-size: 0.78rem; letter-spacing: 0.2em;
+            text-transform: uppercase; cursor: pointer; position: relative; overflow: hidden;
+            transition: color 0.5s ease; margin-top: 1rem; align-self: center;
+        }
+        .form-submit::before {
+            content: ''; position: absolute; inset: 0; background: var(--ink);
+            transform: translateX(-101%); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .form-submit:hover { color: var(--bg); }
+        .form-submit:hover::before { transform: translateX(0); }
+        .form-submit span { position: relative; z-index: 1; }
+        .form-success { display: none; text-align: center; padding: 3rem; }
+        .form-success.show { display: block; }
+        .form-success h3 { font-size: 1.8rem; font-weight: 300; color: var(--line-color); margin-bottom: 1rem; }
+        .form-success p { font-size: 0.92rem; color: #5a5550; font-weight: 300; }
+
+        /* --- FOOTER --- */
+        footer { padding: 4rem 3rem 2rem; border-top: 1px solid var(--border); position: relative; z-index: 2; }
+        .footer-top { display: flex; justify-content: space-between; align-items: start; max-width: 1200px; margin: 0 auto 4rem; }
+        .footer-brand { display: flex; align-items: center; gap: 0.6rem; }
+        .footer-brand-text { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; }
+        .footer-cols { display: flex; gap: 5rem; }
+        .footer-col h4 { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 1.2rem; color: var(--line-color); font-weight: 400; }
+        .footer-col a { display: block; font-size: 0.88rem; color: #8a8580; text-decoration: none; margin-bottom: 0.6rem; transition: color 0.3s ease; font-weight: 300; }
+        .footer-col a:hover { color: var(--ink); }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.72rem; color: #aaa59e; letter-spacing: 0.1em; }
+
+        /* --- WHATSAPP FLOAT --- */
+        .whatsapp-float {
+            position: fixed; bottom: 2rem; right: 2rem; z-index: 9998;
+            width: 56px; height: 56px; border-radius: 50%;
+            background: #25D366; border: none; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5); }
+        .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
+        .whatsapp-tooltip {
+            position: absolute; right: 70px; top: 50%; transform: translateY(-50%);
+            background: #fff; color: var(--ink); padding: 0.6rem 1rem; border-radius: 8px;
+            font-family: 'Outfit', sans-serif; font-size: 0.82rem; font-weight: 400;
+            white-space: nowrap; box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+        }
+        .whatsapp-tooltip::after {
+            content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%);
+            border: 6px solid transparent; border-left-color: #fff;
+        }
+        .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            nav { padding: 1.2rem 1.5rem; }
+            .nav-links {
+                display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+                background: #fdfcf8; flex-direction: column; align-items: center; justify-content: center;
+                gap: 2rem; z-index: 999;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { font-size: 1.2rem; }
+            .nav-right-mobile { display: flex; }
+            .lang-switch-mobile { display: flex; }
+            .nav-toggle { z-index: 1000; display: block; }
+            .nav-toggle.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+            .nav-toggle.active span:nth-child(2) { opacity: 0; }
+            .nav-toggle.active span:nth-child(3) { bottom: auto; top: 50%; transform: translateY(-50%) rotate(-45deg); }
+            nav.menu-open {
+                backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+                background: #fdfcf8 !important; transition: none !important;
+            }
+            .page-hero { padding: 10rem 1.5rem 4rem; }
+            .menu-section { padding: 2rem 1.5rem 6rem; }
+            .menu-items { grid-template-columns: 1fr; }
+            .menu-tabs { flex-direction: column; align-items: stretch; }
+            .menu-tab { text-align: center; }
+            .menu-cta { padding: 5rem 1.5rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .phone-cta { flex-direction: column; align-items: center; }
+            .footer-top { flex-direction: column; gap: 3rem; }
+            .footer-cols { gap: 3rem; flex-wrap: wrap; }
+            .whatsapp-tooltip { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+    <a href="index.html" class="nav-logo">
+        <span class="nav-logo-text">Swastha</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="menu.html" class="active" data-i18n="nav_menu">Menu</a></li>
+        <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+        <li><a href="index.html#showcase" data-i18n="nav_gallery">Gallery</a></li>
+        <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+        <li>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="sr">SR</button>
+            </div>
+        </li>
+    </ul>
+    <div class="nav-right-mobile">
+        <div class="lang-switch lang-switch-mobile">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="sr">SR</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <p class="page-hero-tag fade-in-up" data-i18n="menu_tag">Crafted with Intention</p>
+    <div class="hr-draw"></div>
+    <h1 class="page-hero-title fade-in-up" data-i18n="menu_title">Our Menu</h1>
+    <p class="page-hero-sub fade-in-up" data-i18n="menu_subtitle">Every dish is a balance of flavor, nutrition, and care, designed to nourish your team and elevate your events.</p>
+</section>
+
+<!-- MENU SECTION -->
+<section class="menu-section">
+    <!-- Tabs -->
+    <div class="menu-tabs">
+        <button class="menu-tab active" data-target="general" data-i18n="menu_tab_general">General Menu</button>
+        <button class="menu-tab" data-target="premium" data-i18n="menu_tab_premium">Premium Menu</button>
+    </div>
+
+    <!-- GENERAL MENU -->
+    <div class="menu-content active" id="menu-general">
+
+        <!-- Appetizers -->
+        <div class="menu-category fade-in-up">
+            <div class="menu-category-header">
+                <div class="menu-category-icon">
+                    <svg viewBox="0 0 40 40"><path class="icon-path" d="M8,28 Q8,14 20,10 Q32,14 32,28"/><line class="icon-path" x1="8" y1="28" x2="32" y2="28"/></svg>
+                </div>
+                <h3 class="menu-category-name" data-i18n="cat_appetizers">Appetizers</h3>
+                <div class="menu-category-line"></div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_app_1_name">Seasonal Bruschetta</div>
+                    <div class="menu-item-desc" data-i18n="g_app_1_desc">Toasted sourdough topped with fresh seasonal vegetables, herbs, and extra virgin olive oil.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegetarian">Vegetarian</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_app_2_name">Mediterranean Hummus Platter</div>
+                    <div class="menu-item-desc" data-i18n="g_app_2_desc">Creamy house-made hummus served with warm pita, olives, and roasted peppers.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegan">Vegan</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_app_3_name">Garden Fresh Soup</div>
+                    <div class="menu-item-desc" data-i18n="g_app_3_desc">Chef's daily soup made from locally sourced vegetables and aromatic herbs.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_glutenfree">Gluten-Free</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_app_4_name">Chicken Satay Skewers</div>
+                    <div class="menu-item-desc" data-i18n="g_app_4_desc">Tender marinated chicken with a light peanut dipping sauce and fresh lime.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_protein">High Protein</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Courses -->
+        <div class="menu-category fade-in-up">
+            <div class="menu-category-header">
+                <div class="menu-category-icon">
+                    <svg viewBox="0 0 40 40"><circle class="icon-path" cx="20" cy="20" r="12"/><line class="icon-path" x1="20" y1="8" x2="20" y2="5"/><line class="icon-path" x1="14" y1="20" x2="26" y2="20"/></svg>
+                </div>
+                <h3 class="menu-category-name" data-i18n="cat_mains">Main Courses</h3>
+                <div class="menu-category-line"></div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_main_1_name">Grilled Chicken Power Bowl</div>
+                    <div class="menu-item-desc" data-i18n="g_main_1_desc">Herb-grilled chicken breast over quinoa with roasted vegetables, avocado, and tahini dressing.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_protein">High Protein</span><span class="menu-tag" data-i18n="tag_glutenfree">Gluten-Free</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_main_2_name">Wild Salmon Fillet</div>
+                    <div class="menu-item-desc" data-i18n="g_main_2_desc">Pan-seared salmon with lemon-dill sauce, steamed asparagus, and roasted sweet potato.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_omega">Omega-3 Rich</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_main_3_name">Vegetable Risotto</div>
+                    <div class="menu-item-desc" data-i18n="g_main_3_desc">Creamy arborio rice with seasonal vegetables, parmesan, and fresh herbs.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegetarian">Vegetarian</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_main_4_name">Lean Beef Medallions</div>
+                    <div class="menu-item-desc" data-i18n="g_main_4_desc">Tender beef medallions with red wine reduction, roasted root vegetables, and herb mash.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_protein">High Protein</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sides & Salads -->
+        <div class="menu-category fade-in-up">
+            <div class="menu-category-header">
+                <div class="menu-category-icon">
+                    <svg viewBox="0 0 40 40"><path class="icon-path" d="M10,30 Q10,16 20,12 Q30,16 30,30"/><path class="icon-path" d="M16,30 Q16,22 20,20 Q24,22 24,30"/></svg>
+                </div>
+                <h3 class="menu-category-name" data-i18n="cat_sides">Sides & Salads</h3>
+                <div class="menu-category-line"></div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_side_1_name">Mixed Green Salad</div>
+                    <div class="menu-item-desc" data-i18n="g_side_1_desc">Fresh seasonal greens with cherry tomatoes, cucumber, and house vinaigrette.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegan">Vegan</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_side_2_name">Roasted Mediterranean Vegetables</div>
+                    <div class="menu-item-desc" data-i18n="g_side_2_desc">Zucchini, eggplant, bell peppers, and red onion with herbs and olive oil.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegan">Vegan</span><span class="menu-tag" data-i18n="tag_glutenfree">Gluten-Free</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_side_3_name">Quinoa Tabbouleh</div>
+                    <div class="menu-item-desc" data-i18n="g_side_3_desc">Protein-rich quinoa with parsley, mint, tomatoes, and lemon dressing.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegan">Vegan</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_side_4_name">Sweet Potato Wedges</div>
+                    <div class="menu-item-desc" data-i18n="g_side_4_desc">Oven-roasted sweet potato wedges with rosemary and a touch of sea salt.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegan">Vegan</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-category fade-in-up">
+            <div class="menu-category-header">
+                <div class="menu-category-icon">
+                    <svg viewBox="0 0 40 40"><path class="icon-path" d="M12,28 Q12,18 20,16 Q28,18 28,28"/><line class="icon-path" x1="12" y1="28" x2="28" y2="28"/><path class="icon-path" d="M18,16 Q19,10 20,12 Q21,10 22,16"/></svg>
+                </div>
+                <h3 class="menu-category-name" data-i18n="cat_desserts">Desserts</h3>
+                <div class="menu-category-line"></div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_des_1_name">Fresh Fruit Platter</div>
+                    <div class="menu-item-desc" data-i18n="g_des_1_desc">Seasonal fruits artfully arranged with a honey-yogurt dip.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_glutenfree">Gluten-Free</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="g_des_2_name">Dark Chocolate Mousse</div>
+                    <div class="menu-item-desc" data-i18n="g_des_2_desc">Rich, velvety chocolate mousse made with 70% dark chocolate and fresh cream.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegetarian">Vegetarian</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PREMIUM MENU -->
+    <div class="menu-content" id="menu-premium">
+
+        <!-- Premium Appetizers -->
+        <div class="menu-category fade-in-up">
+            <div class="menu-category-header">
+                <div class="menu-category-icon">
+                    <svg viewBox="0 0 40 40"><path class="icon-path" d="M8,28 Q8,14 20,10 Q32,14 32,28"/><line class="icon-path" x1="8" y1="28" x2="32" y2="28"/></svg>
+                </div>
+                <h3 class="menu-category-name" data-i18n="cat_appetizers">Appetizers</h3>
+                <div class="menu-category-line"></div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_app_1_name">Tuna Tartare</div>
+                    <div class="menu-item-desc" data-i18n="p_app_1_desc">Sushi-grade tuna with avocado, sesame, soy-ginger emulsion, and micro greens.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_glutenfree">Gluten-Free</span><span class="menu-tag">Premium</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_app_2_name">Burrata & Heirloom Tomatoes</div>
+                    <div class="menu-item-desc" data-i18n="p_app_2_desc">Creamy Italian burrata with vine-ripened heirloom tomatoes, basil oil, and aged balsamic.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegetarian">Vegetarian</span><span class="menu-tag">Premium</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_app_3_name">Lobster Bisque</div>
+                    <div class="menu-item-desc" data-i18n="p_app_3_desc">Rich, velvety lobster bisque with a touch of cognac and crème fraîche.</div>
+                    <div class="menu-item-tags"><span class="menu-tag">Premium</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_app_4_name">Wagyu Beef Carpaccio</div>
+                    <div class="menu-item-desc" data-i18n="p_app_4_desc">Paper-thin wagyu slices with truffle aioli, arugula, and shaved parmesan.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_protein">High Protein</span><span class="menu-tag">Premium</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium Main Courses -->
+        <div class="menu-category fade-in-up">
+            <div class="menu-category-header">
+                <div class="menu-category-icon">
+                    <svg viewBox="0 0 40 40"><circle class="icon-path" cx="20" cy="20" r="12"/><line class="icon-path" x1="20" y1="8" x2="20" y2="5"/><line class="icon-path" x1="14" y1="20" x2="26" y2="20"/></svg>
+                </div>
+                <h3 class="menu-category-name" data-i18n="cat_mains">Main Courses</h3>
+                <div class="menu-category-line"></div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_main_1_name">Filet Mignon</div>
+                    <div class="menu-item-desc" data-i18n="p_main_1_desc">Prime beef tenderloin with truffle butter, fondant potato, and seasonal vegetables.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_protein">High Protein</span><span class="menu-tag">Premium</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_main_2_name">Pan-Seared Sea Bass</div>
+                    <div class="menu-item-desc" data-i18n="p_main_2_desc">Fresh sea bass with lemon beurre blanc, saffron risotto, and grilled asparagus.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_omega">Omega-3 Rich</span><span class="menu-tag">Premium</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_main_3_name">Duck Breast Confit</div>
+                    <div class="menu-item-desc" data-i18n="p_main_3_desc">Slow-cooked duck breast with cherry reduction, sweet potato purée, and wilted greens.</div>
+                    <div class="menu-item-tags"><span class="menu-tag">Premium</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_main_4_name">Truffle Mushroom Wellington</div>
+                    <div class="menu-item-desc" data-i18n="p_main_4_desc">Wild mushroom and truffle duxelles wrapped in golden puff pastry with a rich jus.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegetarian">Vegetarian</span><span class="menu-tag">Premium</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium Sides -->
+        <div class="menu-category fade-in-up">
+            <div class="menu-category-header">
+                <div class="menu-category-icon">
+                    <svg viewBox="0 0 40 40"><path class="icon-path" d="M10,30 Q10,16 20,12 Q30,16 30,30"/><path class="icon-path" d="M16,30 Q16,22 20,20 Q24,22 24,30"/></svg>
+                </div>
+                <h3 class="menu-category-name" data-i18n="cat_sides">Sides & Salads</h3>
+                <div class="menu-category-line"></div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_side_1_name">Truffle Parmesan Fries</div>
+                    <div class="menu-item-desc" data-i18n="p_side_1_desc">Hand-cut fries with truffle oil, grated parmesan, and fresh herbs.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegetarian">Vegetarian</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_side_2_name">Caesar Royale</div>
+                    <div class="menu-item-desc" data-i18n="p_side_2_desc">Classic Caesar with anchovy dressing, crispy croutons, and shaved pecorino.</div>
+                    <div class="menu-item-tags"><span class="menu-tag">Premium</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium Desserts -->
+        <div class="menu-category fade-in-up">
+            <div class="menu-category-header">
+                <div class="menu-category-icon">
+                    <svg viewBox="0 0 40 40"><path class="icon-path" d="M12,28 Q12,18 20,16 Q28,18 28,28"/><line class="icon-path" x1="12" y1="28" x2="28" y2="28"/><path class="icon-path" d="M18,16 Q19,10 20,12 Q21,10 22,16"/></svg>
+                </div>
+                <h3 class="menu-category-name" data-i18n="cat_desserts">Desserts</h3>
+                <div class="menu-category-line"></div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_des_1_name">Crème Brûlée</div>
+                    <div class="menu-item-desc" data-i18n="p_des_1_desc">Classic French vanilla custard with a caramelized sugar crust.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegetarian">Vegetarian</span><span class="menu-tag">Premium</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_des_2_name">Chocolate Fondant</div>
+                    <div class="menu-item-desc" data-i18n="p_des_2_desc">Warm dark chocolate cake with a molten center, served with vanilla bean ice cream.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegetarian">Vegetarian</span><span class="menu-tag">Premium</span></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name" data-i18n="p_des_3_name">Tiramisu</div>
+                    <div class="menu-item-desc" data-i18n="p_des_3_desc">Authentic Italian tiramisu with espresso-soaked ladyfingers and mascarpone cream.</div>
+                    <div class="menu-item-tags"><span class="menu-tag" data-i18n="tag_vegetarian">Vegetarian</span><span class="menu-tag">Premium</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Note -->
+    <div class="menu-note fade-in-up">
+        <p data-i18n="menu_note">Our menus are fully customizable to accommodate dietary requirements and preferences. Contact us to create a tailored culinary experience for your team or event.</p>
+    </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="menu-cta" id="menuContact">
+    <div class="menu-cta-inner">
+        <div class="menu-cta-header">
+            <div class="section-label fade-in-up" data-i18n="menu_cta_label">Get Your Quote</div>
+            <div class="hr-draw"></div>
+            <h2 class="menu-cta-title fade-in-up" data-i18n="menu_cta_title">Let's Plan<br>Your Menu</h2>
+            <p class="menu-cta-sub fade-in-up" data-i18n="menu_cta_sub">Contact us to discuss your event, customize the menu, and receive a personalized offer.</p>
+        </div>
+
+        <!-- Phone & WhatsApp CTAs -->
+        <div class="phone-cta fade-in-up">
+            <a href="tel:+381692726003" class="phone-btn">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <span data-i18n="cta_call">Call Us: +381 69 272 6003</span>
+            </a>
+            <a href="https://wa.me/381692726003?text=Hi%20Swastha!%20I%27d%20like%20to%20discuss%20your%20menu%20options." target="_blank" class="phone-btn whatsapp-btn">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                <span data-i18n="cta_whatsapp">Chat on WhatsApp</span>
+            </a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="menu-contact-form fade-in-up">
+            <p class="menu-form-title" data-i18n="menu_form_title">Or Send Us a Message</p>
+            <form class="contact-form" id="menuForm" onsubmit="handleMenuFormSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mName" data-i18n="form_name">Your Name</label>
+                        <input type="text" id="mName" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mEmail" data-i18n="form_email">Email</label>
+                        <input type="email" id="mEmail" name="email" placeholder="john@company.com" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mPhone" data-i18n="form_phone">Phone</label>
+                        <input type="tel" id="mPhone" name="phone" placeholder="+381 ...">
+                    </div>
+                    <div class="form-group">
+                        <label for="mEventType" data-i18n="form_event_type">Event Type</label>
+                        <select id="mEventType" name="event_type">
+                            <option value="" disabled selected data-i18n="form_select_event">Select event type</option>
+                            <option value="corporate-lunch" data-i18n="form_opt_corp_lunch">Corporate Lunch</option>
+                            <option value="executive-dining" data-i18n="form_opt_exec">Executive Dining</option>
+                            <option value="celebration" data-i18n="form_opt_celebration">Celebration / Party</option>
+                            <option value="conference" data-i18n="form_opt_conference">Conference / Seminar</option>
+                            <option value="other" data-i18n="form_opt_other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mGuests" data-i18n="form_guests">Number of Guests</label>
+                        <input type="number" id="mGuests" name="guests" placeholder="50" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="mMenuType" data-i18n="form_menu_pref">Menu Preference</label>
+                        <select id="mMenuType" name="menu_type">
+                            <option value="" disabled selected data-i18n="form_select_menu">Select menu</option>
+                            <option value="general" data-i18n="menu_tab_general">General Menu</option>
+                            <option value="premium" data-i18n="menu_tab_premium">Premium Menu</option>
+                            <option value="custom" data-i18n="form_opt_custom_menu">Custom / Mixed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mMessage" data-i18n="form_message">Message</label>
+                    <textarea id="mMessage" name="message" rows="4" placeholder="Tell us about your event, dietary requirements, or specific requests..."></textarea>
+                </div>
+                <button type="submit" class="form-submit"><span data-i18n="form_send">Send Inquiry</span></button>
+            </form>
+            <div class="form-success" id="menuFormSuccess">
+                <h3 data-i18n="form_thanks">Thank You!</h3>
+                <p data-i18n="form_thanks_msg">Your menu inquiry has been received. We'll get back to you within 24 hours with a tailored proposal.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-brand">
+            <span class="footer-brand-text">Swastha</span>
+        </div>
+        <div class="footer-cols">
+            <div class="footer-col">
+                <h4 data-i18n="footer_navigate">Navigate</h4>
+                <a href="index.html#services" data-i18n="nav_services">Services</a>
+                <a href="menu.html" data-i18n="nav_menu">Menu</a>
+                <a href="blog.html" data-i18n="nav_blog">Blog</a>
+                <a href="index.html#showcase" data-i18n="nav_gallery">Gallery</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_connect">Connect</h4>
+                <a href="https://www.instagram.com/swastha_catering/" target="_blank">Instagram</a>
+                <a href="https://wa.me/381692726003" target="_blank">WhatsApp</a>
+                <a href="mailto:swasthabgd@gmail.com">Email</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_reach">Reach Us</h4>
+                <a href="mailto:swasthabgd@gmail.com">swasthabgd@gmail.com</a>
+                <a href="tel:+381692726003">+381 69 272 6003</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Swastha Catering. <span data-i18n="footer_rights">All rights reserved.</span></div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/381692726003?text=Hi%20Swastha!%20I%27d%20like%20to%20inquire%20about%20your%20menu." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-tooltip" data-i18n="wa_tooltip">Chat with us!</span>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.072-1.108l-.292-.174-3.024.793.808-2.953-.19-.302A8 8 0 1112 20z"/>
+    </svg>
+</a>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+const scrollProgress = document.getElementById('scrollProgress');
+
+// Mobile nav toggle
+const navEl = document.getElementById('mainNav');
+const navLinksEl = document.getElementById('navLinks');
+const navToggleBtn = document.getElementById('navToggle');
+navToggleBtn.addEventListener('click', function() {
+    navLinksEl.classList.toggle('open');
+    navEl.classList.toggle('menu-open');
+    navToggleBtn.classList.toggle('active');
+});
+document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+        navLinksEl.classList.remove('open');
+        navEl.classList.remove('menu-open');
+        navToggleBtn.classList.remove('active');
+    });
+});
+
+// Menu tab switching
+document.querySelectorAll('.menu-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.menu-content').forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('menu-' + tab.dataset.target).classList.add('active');
+        // Re-observe items in the newly visible tab
+        document.querySelectorAll('.menu-content.active .menu-item').forEach(item => {
+            item.classList.remove('visible');
+            menuItemObs.observe(item);
+        });
+    });
+});
+
+// Intersection observers
+const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.fade-in-up, .hr-draw').forEach(el => revealObs.observe(el));
+
+const menuItemObs = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+            setTimeout(() => e.target.classList.add('visible'), i * 80);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.menu-item').forEach(item => menuItemObs.observe(item));
+
+// Scroll handling
+let ticking = false;
+function onScroll() {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            const st = window.scrollY;
+            const dh = document.documentElement.scrollHeight - window.innerHeight;
+            scrollProgress.style.width = (st / dh) * 100 + '%';
+            navEl.classList.toggle('scrolled', st > 80);
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// Contact form handler
+function handleMenuFormSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('menuForm');
+    const data = new FormData(form);
+    const subject = encodeURIComponent('Menu Inquiry from ' + (data.get('name') || 'Website'));
+    const body = encodeURIComponent(
+        'Name: ' + (data.get('name') || '-') + '\n' +
+        'Email: ' + (data.get('email') || '-') + '\n' +
+        'Phone: ' + (data.get('phone') || '-') + '\n' +
+        'Event Type: ' + (data.get('event_type') || '-') + '\n' +
+        'Number of Guests: ' + (data.get('guests') || '-') + '\n' +
+        'Menu Preference: ' + (data.get('menu_type') || '-') + '\n\n' +
+        'Message:\n' + (data.get('message') || '-')
+    );
+    window.location.href = 'mailto:swasthabgd@gmail.com?subject=' + subject + '&body=' + body;
+    form.style.display = 'none';
+    document.getElementById('menuFormSuccess').classList.add('show');
+}
+
+// ===== LANGUAGE SWITCH =====
+const translations = {
+    sr: {
+        // Nav
+        nav_services: "Usluge",
+        nav_menu: "Meni",
+        nav_blog: "Blog",
+        nav_gallery: "Galerija",
+        nav_contact: "Kontakt",
+        // Page hero
+        menu_tag: "Osmišljeno s namerom",
+        menu_title: "Naš Meni",
+        menu_subtitle: "Svako jelo je spoj ukusa, nutritivne vrednosti i pažnje, dizajnirano da nahrani vaš tim i uzdigne vaše događaje.",
+        // Tabs
+        menu_tab_general: "Opšti Meni",
+        menu_tab_premium: "Premium Meni",
+        // Categories
+        cat_appetizers: "Predjela",
+        cat_mains: "Glavna Jela",
+        cat_sides: "Prilozi i Salate",
+        cat_desserts: "Deserti",
+        // General Menu Items
+        g_app_1_name: "Sezonska Brusketa",
+        g_app_1_desc: "Tostiran hleb od kiselog testa sa svežim sezonskim povrćem, začinskim biljem i ekstra devičanskim maslinovim uljem.",
+        g_app_2_name: "Mediteranski Humus Plata",
+        g_app_2_desc: "Kremasti domaći humus serviran sa toplom pitom, maslinama i pečenim paprikama.",
+        g_app_3_name: "Sveža Bašta Supa",
+        g_app_3_desc: "Dnevna supa od lokalnog povrća i aromatičnog bilja.",
+        g_app_4_name: "Piletina Satay na Štapiću",
+        g_app_4_desc: "Nežna marinirana piletina sa laganim sosom od kikirikija i svežim limetom.",
+        g_main_1_name: "Grilovana Piletina Power Bowl",
+        g_main_1_desc: "Piletina sa začinskim biljem na kvinoji sa pečenim povrćem, avokadom i tahini prelivom.",
+        g_main_2_name: "File Divljeg Lososa",
+        g_main_2_desc: "Losos sa limunom i mirođijom, kuvanim špaglama i pečenim batatom.",
+        g_main_3_name: "Rižoto sa Povrćem",
+        g_main_3_desc: "Kremasti arborio pirinač sa sezonskim povrćem, parmezanom i svežim biljem.",
+        g_main_4_name: "Medaljoni od Junećeg Mesa",
+        g_main_4_desc: "Nežni juneći medaljoni sa redukcijom od crnog vina, pečenim korenim povrćem i pireom sa biljem.",
+        g_side_1_name: "Mešana Zelena Salata",
+        g_side_1_desc: "Sveže sezonsko zelenilo sa cherry paradajzom, krastavcem i domaćim vinegretom.",
+        g_side_2_name: "Pečeno Mediteransko Povrće",
+        g_side_2_desc: "Tikvice, patlidžan, paprike i crveni luk sa biljem i maslinovim uljem.",
+        g_side_3_name: "Kvinoja Tabule",
+        g_side_3_desc: "Kvinoja bogata proteinima sa peršunom, nanom, paradajzom i limunovim prelivom.",
+        g_side_4_name: "Kriške Batata",
+        g_side_4_desc: "Pečene kriške batata sa ruzmarinom i mrvom morske soli.",
+        g_des_1_name: "Plata Svežeg Voća",
+        g_des_1_desc: "Sezonsko voće umetički aranžirano sa dipom od meda i jogurta.",
+        g_des_2_name: "Mus od Tamne Čokolade",
+        g_des_2_desc: "Bogat, baršunast čokoladni mus od 70% tamne čokolade i svežeg krema.",
+        // Premium Menu Items
+        p_app_1_name: "Tartar od Tune",
+        p_app_1_desc: "Tuna sushi kvaliteta sa avokadom, sezamom, soja-đumbir emulzijom i mikro zelenilom.",
+        p_app_2_name: "Burata i Heirloom Paradajz",
+        p_app_2_desc: "Kremasta italijanska burata sa heirloom paradajzom, uljem od bosiljka i odležalim balzamikom.",
+        p_app_3_name: "Bisque od Jastoga",
+        p_app_3_desc: "Bogat, baršunast bisque od jastoga sa notom konjaka i krema.",
+        p_app_4_name: "Wagyu Karpačo",
+        p_app_4_desc: "Tanki listovi wagyu govedine sa tartufskim aiolijem, rukolom i rendanim parmezanom.",
+        p_main_1_name: "File Minjon",
+        p_main_1_desc: "Vrhunski goveđi file sa tartufskim puterom, fondant krompirom i sezonskim povrćem.",
+        p_main_2_name: "Brancin na Tiganju",
+        p_main_2_desc: "Svež brancin sa limun beurre blanc sosom, šafran rizotom i grilovanih špaglama.",
+        p_main_3_name: "Konfi Pačje Grudi",
+        p_main_3_desc: "Polako kuvane pačje grudi sa redukcijom od višanja, pireom od batata i uvelim zelenilom.",
+        p_main_4_name: "Tartuf Pečurke Wellington",
+        p_main_4_desc: "Divlje pečurke i tartuf duxelles uvijeni u zlatno lisnato testo sa bogatim žisom.",
+        p_side_1_name: "Tartuf Parmezan Pomfrit",
+        p_side_1_desc: "Ručno sečen pomfrit sa tartufskim uljem, rendanim parmezanom i svežim biljem.",
+        p_side_2_name: "Caesar Royale",
+        p_side_2_desc: "Klasična Caesar salata sa inćun prelivom, hrskavim krutonima i rendanim pekorinom.",
+        p_des_1_name: "Crème Brûlée",
+        p_des_1_desc: "Klasični francuski vanila krem sa karamelizovanom korom od šećera.",
+        p_des_2_name: "Čokoladni Fondant",
+        p_des_2_desc: "Topla torta od tamne čokolade sa tekućim centrom, servirana sa sladoledom od vanile.",
+        p_des_3_name: "Tiramisu",
+        p_des_3_desc: "Autentičan italijanski tiramisu sa piškotama natopljenim espressom i mascarpone kremom.",
+        // Tags
+        tag_vegetarian: "Vegetarijansko",
+        tag_vegan: "Vegansko",
+        tag_glutenfree: "Bez Glutena",
+        tag_protein: "Bogato Proteinima",
+        tag_omega: "Bogato Omega-3",
+        // Menu note
+        menu_note: "Naši meniji su potpuno prilagodljivi dijetetskim zahtevima i preferencijama. Kontaktirajte nas da kreiramo prilagođeno kulinarski doživljaj za vaš tim ili događaj.",
+        // CTA
+        menu_cta_label: "Zatražite Ponudu",
+        menu_cta_title: "Isplanirajmo<br>Vaš Meni",
+        menu_cta_sub: "Kontaktirajte nas da razgovaramo o vašem događaju, prilagodimo meni i dobijete personalizovanu ponudu.",
+        cta_call: "Pozovite Nas: +381 69 272 6003",
+        cta_whatsapp: "Pišite na WhatsApp",
+        // Form
+        menu_form_title: "Ili Nam Pošaljite Poruku",
+        form_name: "Vaše Ime",
+        form_email: "Email",
+        form_phone: "Telefon",
+        form_event_type: "Tip Događaja",
+        form_select_event: "Izaberite tip događaja",
+        form_opt_corp_lunch: "Korporativni Ručak",
+        form_opt_exec: "Egzekutivni Obrok",
+        form_opt_celebration: "Proslava / Žurka",
+        form_opt_conference: "Konferencija / Seminar",
+        form_opt_other: "Ostalo",
+        form_guests: "Broj Gostiju",
+        form_menu_pref: "Izbor Menija",
+        form_select_menu: "Izaberite meni",
+        form_opt_custom_menu: "Prilagođen / Mešovit",
+        form_message: "Poruka",
+        form_send: "Pošaljite Upit",
+        form_thanks: "Hvala Vam!",
+        form_thanks_msg: "Vaš upit za meni je primljen. Javićemo vam se u roku od 24 sata sa prilagođenom ponudom.",
+        // Footer
+        footer_navigate: "Navigacija",
+        footer_connect: "Povežite Se",
+        footer_reach: "Kontaktirajte Nas",
+        footer_rights: "Sva prava zadržana.",
+        // WhatsApp
+        wa_tooltip: "Pišite nam!",
+    }
+};
+
+function setLanguage(lang) {
+    localStorage.setItem('swastha-lang', lang);
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    document.documentElement.lang = lang;
+    if (lang === 'sr') {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.dataset.i18n;
+            if (translations.sr[key]) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
+                if (el.tagName === 'OPTION') { el.textContent = translations.sr[key]; return; }
+                if (!el.dataset.enOriginal) el.dataset.enOriginal = el.innerHTML;
+                el.innerHTML = translations.sr[key];
+            }
+        });
+    } else {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            if (el.dataset.enOriginal) el.innerHTML = el.dataset.enOriginal;
+        });
+    }
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+});
+
+// Restore saved language
+window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('swastha-lang');
+    if (saved) setLanguage(saved);
+});
+</script>
+</body>
+</html>
