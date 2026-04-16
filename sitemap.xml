@@ -10,10 +10,18 @@
         <priority>1.0</priority>
     </url>
 
-    <!-- Menu Page -->
+    <!-- Corporate Events -->
     <url>
-        <loc>https://swasthacatering.com/menu.html</loc>
-        <lastmod>2026-04-10</lastmod>
+        <loc>https://swasthacatering.com/corporate.html</loc>
+        <lastmod>2026-04-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Production / Private Events -->
+    <url>
+        <loc>https://swasthacatering.com/production.html</loc>
+        <lastmod>2026-04-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swastha Catering | Healthy Corporate Catering Belgrade | Ketering Beograd</title>
     <meta name="description" content="Swastha Catering: premium healthy corporate catering in Belgrade, Serbia. Daily office lunches, executive dining, team wellness programs, and event catering. Zdrav ketering za firme u Beogradu.">
@@ -666,9 +667,9 @@
     </a>
     <ul class="nav-links" id="navLinks">
         <li><a href="#services" data-i18n="nav_services">Services</a></li>
-        <li><a href="menu.html" data-i18n="nav_menu">Menu</a></li>
+        <li><a href="corporate.html" data-i18n="nav_corporate">Corporate</a></li>
+        <li><a href="production.html" data-i18n="nav_production">Production</a></li>
         <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
-        <li><a href="#showcase" data-i18n="nav_gallery">Gallery</a></li>
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         <li>
             <div class="lang-switch">
@@ -993,66 +994,54 @@
             <form class="contact-form" id="inquiryForm" onsubmit="handleFormSubmit(event)">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="formName">Your Name</label>
-                        <input type="text" id="formName" name="name" placeholder="John Doe" required>
+                        <label for="formName" data-i18n="form_name">Your Name</label>
+                        <input type="text" id="formName" name="name" placeholder="John Doe" data-i18n-placeholder="form_name_ph" required>
                     </div>
                     <div class="form-group">
-                        <label for="formCompany">Company</label>
-                        <input type="text" id="formCompany" name="company" placeholder="Acme Corp">
+                        <label for="formCompany" data-i18n="form_company">Company</label>
+                        <input type="text" id="formCompany" name="company" placeholder="Acme Corp" data-i18n-placeholder="form_company_ph">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="formEmail">Email</label>
-                        <input type="email" id="formEmail" name="email" placeholder="john@company.com" required>
+                        <label for="formEmail" data-i18n="form_email">Email</label>
+                        <input type="email" id="formEmail" name="email" placeholder="john@company.com" data-i18n-placeholder="form_email_ph" required>
                     </div>
                     <div class="form-group">
-                        <label for="formPhone">Phone</label>
+                        <label for="formPhone" data-i18n="form_phone">Phone</label>
                         <input type="tel" id="formPhone" name="phone" placeholder="+381 ...">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="formService">Service Interested In</label>
+                    <label for="formService" data-i18n="form_service">Service Interested In</label>
                     <select id="formService" name="service" required>
-                        <option value="" disabled selected>Select a service</option>
-                        <option value="daily-lunches">Daily Office Lunches</option>
-                        <option value="executive-dining">Executive Dining</option>
-                        <option value="wellness-programs">Team Wellness Programs</option>
-                        <option value="event-catering">Event Catering</option>
-                        <option value="custom">Custom Package</option>
+                        <option value="" disabled selected data-i18n="form_service_select">Select a service</option>
+                        <option value="daily-lunches" data-i18n="form_service_1">Daily Office Lunches</option>
+                        <option value="executive-dining" data-i18n="form_service_2">Executive Dining</option>
+                        <option value="wellness-programs" data-i18n="form_service_3">Team Wellness Programs</option>
+                        <option value="event-catering" data-i18n="form_service_4">Event Catering</option>
+                        <option value="custom" data-i18n="form_service_5">Custom Package</option>
                     </select>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="formTeamSize">Team Size</label>
-                        <select id="formTeamSize" name="team_size">
-                            <option value="" disabled selected>Select range</option>
-                            <option value="1-20">1 - 20 people</option>
-                            <option value="21-50">21 - 50 people</option>
-                            <option value="51-100">51 - 100 people</option>
-                            <option value="100+">100+ people</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="formBudget">Monthly Budget</label>
-                        <select id="formBudget" name="budget">
-                            <option value="" disabled selected>Select range</option>
-                            <option value="under-500">Under €500</option>
-                            <option value="500-1500">€500 - €1,500</option>
-                            <option value="1500-5000">€1,500 - €5,000</option>
-                            <option value="5000+">€5,000+</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="formTeamSize" data-i18n="form_team">Team Size</label>
+                    <select id="formTeamSize" name="team_size">
+                        <option value="" disabled selected data-i18n="form_team_select">Select range</option>
+                        <option value="1-20" data-i18n="form_team_1">1 - 20 people</option>
+                        <option value="21-50" data-i18n="form_team_2">21 - 50 people</option>
+                        <option value="51-100" data-i18n="form_team_3">51 - 100 people</option>
+                        <option value="100+" data-i18n="form_team_4">100+ people</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="formMessage">Message</label>
-                    <textarea id="formMessage" name="message" rows="4" placeholder="Tell us about your catering needs, dietary requirements, or any questions..."></textarea>
+                    <label for="formMessage" data-i18n="form_message">Message</label>
+                    <textarea id="formMessage" name="message" rows="4" placeholder="Tell us about your catering needs, dietary requirements, or any questions..." data-i18n-placeholder="form_message_ph"></textarea>
                 </div>
                 <button type="submit" class="form-submit"><span data-i18n="form_send">Send Inquiry</span></button>
             </form>
             <div class="form-success" id="formSuccess">
-                <h3>Thank You!</h3>
-                <p>Your inquiry has been received. We'll get back to you within 24 hours with a tailored proposal.</p>
+                <h3 data-i18n="form_success_title">Thank You!</h3>
+                <p data-i18n="form_success_text">Your inquiry has been received. We'll get back to you within 24 hours with a tailored proposal.</p>
             </div>
         </div>
     </div>
@@ -1068,9 +1057,9 @@
             <div class="footer-col">
                 <h4 data-i18n="footer_navigate">Navigate</h4>
                 <a href="#services" data-i18n="nav_services">Services</a>
-                <a href="menu.html" data-i18n="nav_menu">Menu</a>
+                <a href="corporate.html" data-i18n="nav_corporate">Corporate</a>
+                <a href="production.html" data-i18n="nav_production">Production</a>
                 <a href="blog.html" data-i18n="nav_blog">Blog</a>
-                <a href="#showcase" data-i18n="nav_gallery">Gallery</a>
                 <a href="#contact" data-i18n="nav_contact">Contact</a>
             </div>
             <div class="footer-col">
@@ -1370,7 +1359,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 const translations = {
     sr: {
         // Nav
-        nav_services: "Usluge", nav_menu: "Meni", nav_blog: "Blog", nav_gallery: "Galerija", nav_contact: "Kontakt",
+        nav_services: "Usluge", nav_corporate: "Korporativno", nav_production: "Produkcija", nav_blog: "Blog", nav_contact: "Kontakt",
         // Hero
         hero_tag: "Korporativni Zdrav Ketering",
         hero_sub: "Hranimo &nbsp;&middot; &nbsp;Energizujemo &nbsp;&middot; &nbsp;Uzdižemo",
@@ -1404,6 +1393,27 @@ const translations = {
         contact_direct_title: "Pišite Nam Direktno",
         contact_direct_desc: "Imate brzo pitanje? Kontaktirajte nas direktno i javićemo vam se u roku od 24 sata.",
         form_send: "Pošaljite Upit",
+        form_name: "Vaše Ime", form_name_ph: "Marko Marković",
+        form_company: "Kompanija", form_company_ph: "Acme d.o.o.",
+        form_email: "Email", form_email_ph: "marko@firma.com",
+        form_phone: "Telefon",
+        form_service: "Usluga za Koju Ste Zainteresovani",
+        form_service_select: "Izaberite uslugu",
+        form_service_1: "Dnevni Ručkovi za Firme",
+        form_service_2: "Ekskluzivno Serviranje",
+        form_service_3: "Programi Velnesa za Tim",
+        form_service_4: "Ketering za Događaje",
+        form_service_5: "Prilagođeni Paket",
+        form_team: "Veličina Tima",
+        form_team_select: "Izaberite opseg",
+        form_team_1: "1 - 20 ljudi",
+        form_team_2: "21 - 50 ljudi",
+        form_team_3: "51 - 100 ljudi",
+        form_team_4: "100+ ljudi",
+        form_message: "Poruka",
+        form_message_ph: "Recite nam o svojim potrebama za keteringom, dijetetskim zahtevima ili postavite pitanje...",
+        form_success_title: "Hvala Vam!",
+        form_success_text: "Vaš upit je primljen. Javićemo vam se u roku od 24 sata sa prilagođenom ponudom.",
         // Footer
         footer_navigate: "Navigacija", footer_connect: "Povežite Se", footer_reach: "Kontaktirajte Nas",
         footer_rights: "Sva prava zadržana.",
@@ -1419,17 +1429,32 @@ function setLanguage(lang) {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.dataset.i18n;
             if (translations.sr[key]) {
-                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
-                if (el.tagName === 'OPTION') { el.textContent = translations.sr[key]; return; }
+                if (el.tagName === 'OPTION') {
+                    if (!el.dataset.enOriginal) el.dataset.enOriginal = el.textContent;
+                    el.textContent = translations.sr[key];
+                    return;
+                }
                 if (!el.dataset.enOriginal) el.dataset.enOriginal = el.innerHTML;
                 el.innerHTML = translations.sr[key];
             }
         });
-        // Re-init philosophy word reveal after language change
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.dataset.i18nPlaceholder;
+            if (translations.sr[key]) {
+                if (!el.dataset.enPlaceholder) el.dataset.enPlaceholder = el.getAttribute('placeholder') || '';
+                el.setAttribute('placeholder', translations.sr[key]);
+            }
+        });
         reinitPhilosophy();
     } else {
         document.querySelectorAll('[data-i18n]').forEach(el => {
-            if (el.dataset.enOriginal) el.innerHTML = el.dataset.enOriginal;
+            if (el.dataset.enOriginal) {
+                if (el.tagName === 'OPTION') el.textContent = el.dataset.enOriginal;
+                else el.innerHTML = el.dataset.enOriginal;
+            }
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            if (el.dataset.enPlaceholder !== undefined) el.setAttribute('placeholder', el.dataset.enPlaceholder);
         });
         reinitPhilosophy();
     }
@@ -1452,28 +1477,38 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Contact form handler
-function handleFormSubmit(e) {
+async function handleFormSubmit(e) {
     e.preventDefault();
     const form = document.getElementById('inquiryForm');
+    const submitBtn = form.querySelector('.form-submit');
+    const originalBtnHTML = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>Sending...</span>';
+
     const data = new FormData(form);
+    data.append('_subject', 'Catering Inquiry from ' + (data.get('name') || 'Website'));
+    data.append('_template', 'table');
+    data.append('_captcha', 'false');
 
-    // Build mailto with form data as body
-    const subject = encodeURIComponent('Catering Inquiry from ' + (data.get('name') || 'Website'));
-    const body = encodeURIComponent(
-        'Name: ' + (data.get('name') || '-') + '\n' +
-        'Company: ' + (data.get('company') || '-') + '\n' +
-        'Email: ' + (data.get('email') || '-') + '\n' +
-        'Phone: ' + (data.get('phone') || '-') + '\n' +
-        'Service: ' + (data.get('service') || '-') + '\n' +
-        'Team Size: ' + (data.get('team_size') || '-') + '\n' +
-        'Budget: ' + (data.get('budget') || '-') + '\n\n' +
-        'Message:\n' + (data.get('message') || '-')
-    );
-    window.location.href = 'mailto:swasthabgd@gmail.com?subject=' + subject + '&body=' + body;
-
-    // Show success state
-    form.style.display = 'none';
-    document.getElementById('formSuccess').classList.add('show');
+    try {
+        const res = await fetch('https://formsubmit.co/ajax/swasthabgd@gmail.com', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: data
+        });
+        const json = await res.json();
+        if (json.success === 'true' || json.success === true) {
+            form.style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
+        } else {
+            throw new Error(json.message || 'Submission failed');
+        }
+    } catch (err) {
+        console.error('Form submit error:', err);
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+        alert('Sorry, something went wrong. Please email us directly at swasthabgd@gmail.com');
+    }
 }
 </script>
 </body>
