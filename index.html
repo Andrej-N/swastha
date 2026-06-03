@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -55,24 +55,24 @@
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Daily Office Lunches",
-                        "description": "Wholesome, balanced meals crafted daily for corporate teams"
+                        "name": "Production Catering",
+                        "description": "Full catering and craft service for film and television productions"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Executive Dining",
-                        "description": "Premium culinary experiences for board meetings and executive events"
+                        "name": "Corporate Catering",
+                        "description": "Fresh daily office meals: soup, main course and salad, packed and made the same day"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Team Wellness Programs",
-                        "description": "Comprehensive meal plans for team nutritional wellbeing"
+                        "name": "Wellness Program",
+                        "description": "Individual meal plans built on a professional nutritional basis, delivered to your door"
                     }
                 }
             ]
@@ -313,6 +313,29 @@
         .service-icon .icon-path { fill: none; stroke: var(--line-color); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
         .service-card h3 { font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; }
         .service-card p { font-size: 0.88rem; line-height: 1.8; color: #5a5550; font-weight: 300; }
+        .service-points { list-style: none; margin: 1.4rem 0 1.8rem; padding: 0; }
+        .service-points li {
+            font-size: 0.84rem; line-height: 1.6; color: #5a5550; font-weight: 300;
+            padding-left: 1.2rem; position: relative; margin-bottom: 0.7rem;
+        }
+        .service-points li::before {
+            content: ''; position: absolute; left: 0; top: 0.6em;
+            width: 5px; height: 5px; border-radius: 50%; background: var(--gold);
+        }
+        .service-link {
+            display: inline-flex; align-items: center; gap: 0.6rem;
+            font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+            color: var(--line-color); text-decoration: none; font-weight: 400; margin-top: auto;
+        }
+        .service-link .arrow {
+            width: 18px; height: 1px; background: currentColor; position: relative; transition: width 0.4s ease;
+        }
+        .service-link .arrow::after {
+            content: ''; position: absolute; right: 0; top: -3px; width: 7px; height: 7px;
+            border-right: 1px solid currentColor; border-top: 1px solid currentColor; transform: rotate(45deg);
+        }
+        .service-link:hover .arrow { width: 28px; }
+        .service-card { display: flex; flex-direction: column; }
 
         /* --- SHOWCASE / GALLERY --- */
         .showcase { padding: 10rem 0; }
@@ -393,6 +416,85 @@
             transform: scaleX(0); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s;
         }
         .quote-line.visible { transform: scaleX(1); }
+
+        /* --- WELLNESS FEATURE --- */
+        .wellness { padding: 9rem 3rem; position: relative; z-index: 2; }
+        .wellness-inner {
+            max-width: 1150px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+        }
+        .wellness-img { position: relative; overflow: hidden; border-radius: 2px; aspect-ratio: 4/5; background: var(--warm); }
+        .wellness-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+        .wellness-img:hover img { transform: scale(1.05); }
+        .wellness-text h2 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; }
+        .wellness-text p { font-size: 0.95rem; line-height: 1.9; color: #5a5550; margin-bottom: 1.2rem; }
+        .wellness-points { list-style: none; padding: 0; margin: 1.8rem 0; }
+        .wellness-points li {
+            font-size: 0.92rem; color: var(--ink); font-weight: 300;
+            padding-left: 1.6rem; position: relative; margin-bottom: 1rem;
+        }
+        .wellness-points li::before {
+            content: ''; position: absolute; left: 0; top: 0.55em;
+            width: 7px; height: 7px; border-radius: 50%; background: var(--sage);
+        }
+        .wellness-nutritionist {
+            font-size: 0.82rem; letter-spacing: 0.05em; color: var(--line-color);
+            border-left: 2px solid var(--gold); padding-left: 1rem; margin: 1.8rem 0; font-style: italic;
+        }
+
+        /* --- REFERENCES --- */
+        .references { padding: 9rem 3rem; position: relative; z-index: 2; }
+        .references-header { text-align: center; margin-bottom: 4rem; }
+        .references-title { font-size: clamp(2.2rem, 4.5vw, 3.8rem); }
+        .logo-row {
+            display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+            gap: 2rem; max-width: 1000px; margin: 0 auto 5rem;
+        }
+        .logo-chip {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 200px; height: 110px; padding: 1.5rem 2rem;
+            border: 1px solid var(--border); border-radius: 4px; background: rgba(253,252,248,0.6);
+            text-align: center; transition: all 0.4s ease;
+        }
+        .logo-chip:hover { border-color: var(--line-light); transform: translateY(-3px); }
+        .logo-chip img { max-height: 70px; max-width: 160px; object-fit: contain; filter: grayscale(1); opacity: 0.75; transition: all 0.4s ease; }
+        .logo-chip:hover img { filter: grayscale(0); opacity: 1; }
+        .logo-chip .logo-fallback {
+            font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400;
+            letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink);
+        }
+        .logo-chip .logo-fallback small { display: block; font-size: 0.6rem; letter-spacing: 0.2em; color: #aaa59e; margin-top: 0.4rem; font-weight: 300; }
+        .review-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem; max-width: 1100px; margin: 0 auto;
+        }
+        .review-card {
+            background: rgba(253,252,248,0.7); border: 1px solid var(--border); border-radius: 4px;
+            padding: 2.5rem; display: flex; flex-direction: column;
+        }
+        .review-card .quote-mark { font-family: 'Montserrat', sans-serif; font-size: 3rem; line-height: 0.5; color: var(--gold); opacity: 0.5; margin-bottom: 1rem; }
+        .review-card p { font-size: 0.95rem; line-height: 1.8; color: #444; font-weight: 300; margin-bottom: 1.5rem; }
+        .review-author { display: flex; align-items: center; gap: 1rem; margin-top: auto; }
+        .review-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; background: var(--warm); flex-shrink: 0; }
+        .review-author .ra-name { font-size: 0.9rem; font-weight: 400; color: var(--ink); }
+        .review-author .ra-role { font-size: 0.75rem; color: #8a8580; letter-spacing: 0.05em; }
+
+        /* --- VIDEO PLACEHOLDER (reused on production page) --- */
+        .video-placeholder {
+            position: relative; aspect-ratio: 16/9; width: 100%; overflow: hidden;
+            border-radius: 4px; background: var(--ink);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            color: #fdfcf8; text-align: center; border: 1px solid var(--border);
+        }
+        .video-placeholder .vp-play {
+            width: 64px; height: 64px; border-radius: 50%; border: 1px solid rgba(253,252,248,0.5);
+            display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+        }
+        .video-placeholder .vp-play::after {
+            content: ''; width: 0; height: 0; margin-left: 4px;
+            border-left: 16px solid #fdfcf8; border-top: 10px solid transparent; border-bottom: 10px solid transparent;
+        }
+        .video-placeholder .vp-label { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.7; }
 
         /* --- CTA --- */
         .cta { padding: 10rem 3rem; text-align: center; position: relative; z-index: 2; }
@@ -623,6 +725,10 @@
             .form-row { grid-template-columns: 1fr; }
             .insta-grid { grid-template-columns: repeat(2, 1fr); }
             .whatsapp-tooltip { display: none; }
+            .wellness { padding: 5rem 1.5rem; }
+            .wellness-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .references { padding: 5rem 1.5rem; }
+            .logo-chip { min-width: 140px; height: 90px; padding: 1rem; }
         }
     </style>
 </head>
@@ -666,22 +772,23 @@
         <span class="nav-logo-text">Swastha</span>
     </a>
     <ul class="nav-links" id="navLinks">
-        <li><a href="#services" data-i18n="nav_services">Services</a></li>
-        <li><a href="corporate.html" data-i18n="nav_corporate">Corporate</a></li>
-        <li><a href="production.html" data-i18n="nav_production">Production</a></li>
+        <li><a href="production.html" data-i18n="nav_production">Produkcija</a></li>
+        <li><a href="corporate.html" data-i18n="nav_corporate">Korporativno</a></li>
+        <li><a href="#wellness" data-i18n="nav_wellness">Wellness</a></li>
+        <li><a href="#reference" data-i18n="nav_reference">Reference</a></li>
         <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
-        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
         <li>
             <div class="lang-switch">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="sr">SR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn active" data-lang="sr">SR</button>
             </div>
         </li>
     </ul>
     <div class="nav-right-mobile">
         <div class="lang-switch lang-switch-mobile">
-            <button class="lang-btn active" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="sr">SR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn active" data-lang="sr">SR</button>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -701,12 +808,12 @@
         </svg>
     </div>
     <div class="hero-content">
-        <div class="hero-tag" id="heroTag" data-i18n="hero_tag">Corporate Healthy Meal Catering</div>
+        <div class="hero-tag" id="heroTag" data-i18n="hero_tag">Zdrav Ketering &middot; Produkcija &middot; Wellness</div>
         <h1 class="hero-title">
             <span class="line"><span>Swastha</span></span>
             <span class="line"><span style="font-size: 0.28em; letter-spacing: 0.4em; display: inline-block; margin-top: 0.5em; font-weight: 300; opacity: 0.8;">Catering</span></span>
         </h1>
-        <p class="hero-subtitle" id="heroSub" data-i18n="hero_sub">Nourish &nbsp;&middot; &nbsp;Energize &nbsp;&middot; &nbsp;Elevate</p>
+        <p class="hero-subtitle" id="heroSub" data-i18n="hero_sub">Hranimo &nbsp;&middot; &nbsp;Energizujemo &nbsp;&middot; &nbsp;Uzdižemo</p>
     </div>
     <div class="hero-scroll-indicator" id="heroScroll">
         <span>Scroll</span>
@@ -725,10 +832,10 @@
 <!-- PHILOSOPHY -->
 <section class="philosophy" id="philosophy">
     <div class="philosophy-inner">
-        <div class="section-label fade-in-up" data-i18n="phil_label">Our Philosophy</div>
+        <div class="section-label fade-in-up" data-i18n="phil_label">Naša Filozofija</div>
         <div class="hr-draw"></div>
         <p class="philosophy-text" id="philosophyText" data-i18n="phil_text">
-            We believe that great work starts with the right fuel. Our meals are crafted with intention to nourish your team, boost productivity, and foster a healthy, thriving workplace culture.
+            Verujemo da svaki dobar dan počinje pravim gorivom. Svaki naš obrok pravimo sa namerom — sveže, izbalansirano i tog dana — bilo da hranimo filmsku ekipu na setu, tim u kancelariji ili jednu osobu posvećenu svom zdravlju.
         </p>
     </div>
 </section>
@@ -745,38 +852,46 @@
 <!-- SERVICES -->
 <section class="services" id="services">
     <div class="services-header">
-        <div class="section-label fade-in-up" data-i18n="svc_label">What We Offer</div>
+        <div class="section-label fade-in-up" data-i18n="svc_label">Šta Radimo</div>
         <div class="hr-draw"></div>
-        <h2 class="services-title fade-in-up" data-i18n="svc_title">Curated Experiences</h2>
+        <h2 class="services-title fade-in-up" data-i18n="svc_title">Tri Načina da Vas Nahranimo</h2>
     </div>
     <div class="services-grid">
         <div class="service-card">
             <div class="service-icon">
                 <svg viewBox="0 0 60 60">
-                    <path class="icon-path" d="M10,45 Q10,20 30,15 Q50,20 50,45" />
-                    <line class="icon-path" x1="10" y1="45" x2="50" y2="45" />
-                    <path class="icon-path" d="M25,15 Q28,5 30,8 Q32,5 35,15" />
-                    <line class="icon-path" x1="30" y1="45" x2="30" y2="50" />
-                    <ellipse class="icon-path" cx="30" cy="52" rx="8" ry="3" />
+                    <rect class="icon-path" x="10" y="16" width="40" height="28" rx="3" />
+                    <circle class="icon-path" cx="30" cy="30" r="7" />
+                    <circle class="icon-path" cx="30" cy="30" r="2.5" />
+                    <line class="icon-path" x1="16" y1="16" x2="20" y2="10" />
+                    <line class="icon-path" x1="44" y1="16" x2="40" y2="10" />
+                    <line class="icon-path" x1="20" y1="10" x2="40" y2="10" />
                 </svg>
             </div>
-            <h3 data-i18n="svc1_title">Daily Office Lunches</h3>
-            <p data-i18n="svc1_desc">Wholesome, balanced meals crafted daily to keep your team energized and focused throughout the work day.</p>
+            <h3 data-i18n="svc1_title">Produkcija</h3>
+            <p data-i18n="svc1_desc">Hranimo filmske i televizijske produkcije — od ranih jutarnjih poziva do kasnih noćnih snimanja. Svež, izbalansiran ketering i craft service koji drže celu ekipu u pokretu, bez zastoja i bez drame.</p>
+            <ul class="service-points">
+                <li data-i18n="svc1_p1">Ketering — kompletni obroci za glumačku i tehničku ekipu, uključujući doručak na setu</li>
+                <li data-i18n="svc1_p2">Craft service — sveži snackovi, voće i napici dostupni tokom celog snimanja</li>
+            </ul>
+            <a href="production.html" class="service-link"><span data-i18n="svc_cta">Saznaj više</span><span class="arrow"></span></a>
         </div>
         <div class="service-card">
             <div class="service-icon">
                 <svg viewBox="0 0 60 60">
-                    <rect class="icon-path" x="12" y="20" width="36" height="25" rx="2" />
-                    <line class="icon-path" x1="12" y1="30" x2="48" y2="30" />
-                    <circle class="icon-path" cx="22" cy="36" r="3" />
-                    <circle class="icon-path" cx="33" cy="36" r="3" />
-                    <circle class="icon-path" cx="43" cy="36" r="2" />
-                    <line class="icon-path" x1="20" y1="20" x2="18" y2="14" />
-                    <line class="icon-path" x1="40" y1="20" x2="42" y2="14" />
+                    <path class="icon-path" d="M14,24 h32 v18 a4,4 0 0 1 -4,4 h-24 a4,4 0 0 1 -4,-4 z" />
+                    <line class="icon-path" x1="14" y1="32" x2="46" y2="32" />
+                    <path class="icon-path" d="M22,24 c0,-6 4,-8 8,-8 c4,0 8,2 8,8" />
+                    <path class="icon-path" d="M28,14 q2,-3 4,0" />
                 </svg>
             </div>
-            <h3 data-i18n="svc2_title">Executive Dining</h3>
-            <p data-i18n="svc2_desc">Premium culinary experiences designed for board meetings, client pitches, and executive retreats.</p>
+            <h3 data-i18n="svc2_title">Korporativni Ketering</h3>
+            <p data-i18n="svc2_desc">Svež, kompletan obrok dostavljen u vašu kancelariju — pripremljen i upakovan istog dana. Bez kuvanja, bez gužve i bez kompromisa po zdravlje tima.</p>
+            <ul class="service-points">
+                <li data-i18n="svc2_p1">Obroci obuhvataju supu/potaž, glavno jelo i salatu — sve upakovano i pripremljeno tog dana</li>
+                <li data-i18n="svc2_p2">Minimum porudžbine: 10 obroka</li>
+            </ul>
+            <a href="corporate.html" class="service-link"><span data-i18n="svc_cta">Saznaj više</span><span class="arrow"></span></a>
         </div>
         <div class="service-card">
             <div class="service-icon">
@@ -789,8 +904,13 @@
                     <path class="icon-path" d="M30,18 C30,12 35,10 30,5" />
                 </svg>
             </div>
-            <h3 data-i18n="svc3_title">Team Wellness Programs</h3>
-            <p data-i18n="svc3_desc">Comprehensive meal plans tailored for your team’s nutritional wellbeing, ensuring peak performance and health.</p>
+            <h3 data-i18n="svc3_title">Wellness Program</h3>
+            <p data-i18n="svc3_desc">Individualni program ishrane kreiran baš za vas. U saradnji sa nutricionistom sastavljamo obroke na profesionalnoj nutritivnoj osnovi — prilagođene vašim ciljevima, ukusu i ritmu.</p>
+            <ul class="service-points">
+                <li data-i18n="svc3_p1">Obroci individualno sastavljeni na profesionalnoj nutritivnoj osnovi, u saradnji sa nutricionistom — dostava na vašu adresu</li>
+                <li data-i18n="svc3_p2">5 dana u nedelji</li>
+            </ul>
+            <a href="#wellness" class="service-link"><span data-i18n="svc_cta">Saznaj više</span><span class="arrow"></span></a>
         </div>
     </div>
 </section>
@@ -798,38 +918,39 @@
 <!-- GALLERY / SHOWCASE -->
 <section class="showcase" id="showcase">
     <div class="showcase-header">
-        <div class="section-label fade-in-up" data-i18n="gal_label">Our Work</div>
+        <div class="section-label fade-in-up" data-i18n="gal_label">Naš Rad</div>
         <div class="hr-draw"></div>
-        <h2 class="showcase-title fade-in-up" data-i18n="gal_title">A Taste of Elegance</h2>
+        <h2 class="showcase-title fade-in-up" data-i18n="gal_title">Sveže, Svakog Dana</h2>
     </div>
+    <!-- NAPOMENA: slike su privremene (stock). Zameni ih svojim autentičnim fotografijama nakon snimanja. -->
     <div class="showcase-grid">
         <div class="showcase-item">
             <div class="reveal-mask"></div>
             <div class="showcase-img-wrap">
-                <img class="showcase-img" src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80" alt="Corporate Buffet spread">
+                <img class="showcase-img" src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=900&q=80" alt="Ketering i craft service na produkciji">
             </div>
-            <div class="showcase-overlay"><span>Corporate Buffet</span></div>
+            <div class="showcase-overlay"><span data-i18n="gal_c1">Produkcija &amp; Craft Service</span></div>
         </div>
         <div class="showcase-item">
             <div class="reveal-mask"></div>
             <div class="showcase-img-wrap">
-                <img class="showcase-img" src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80" alt="Healthy Salad Bars">
+                <img class="showcase-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" alt="Korporativni obroci u kutijama">
             </div>
-            <div class="showcase-overlay"><span>Healthy Salad Bars</span></div>
+            <div class="showcase-overlay"><span data-i18n="gal_c2">Korporativni Obroci</span></div>
         </div>
         <div class="showcase-item">
             <div class="reveal-mask"></div>
             <div class="showcase-img-wrap">
-                <img class="showcase-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" alt="Boardroom Dining">
+                <img class="showcase-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Individualni wellness obrok">
             </div>
-            <div class="showcase-overlay"><span>Boardroom Dining</span></div>
+            <div class="showcase-overlay"><span data-i18n="gal_c3">Wellness Obroci</span></div>
         </div>
         <div class="showcase-item">
             <div class="reveal-mask"></div>
             <div class="showcase-img-wrap">
-                <img class="showcase-img" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1200&q=80" alt="Wholesome Snacks">
+                <img class="showcase-img" src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1200&q=80" alt="Sveže salate i namirnice">
             </div>
-            <div class="showcase-overlay"><span>Wholesome Snacks</span></div>
+            <div class="showcase-overlay"><span data-i18n="gal_c4">Sezonske &amp; Sveže Namirnice</span></div>
         </div>
     </div>
 </section>
@@ -837,18 +958,18 @@
 <!-- MARQUEE -->
 <div class="marquee-section">
     <div class="marquee-track">
-        <span class="marquee-item">Corporate Catering <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Healthy Lunches <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Workplace Wellness <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Team Gatherings <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Nutritious Meals <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Office Dining <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Corporate Catering <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Healthy Lunches <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Workplace Wellness <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Team Gatherings <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Nutritious Meals <span class="marquee-dot"></span></span>
-        <span class="marquee-item">Office Dining <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Produkcija <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Craft Service <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Korporativni Ketering <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Wellness Program <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Zdravi Obroci <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Sveže Svakog Dana <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Produkcija <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Craft Service <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Korporativni Ketering <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Wellness Program <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Zdravi Obroci <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Sveže Svakog Dana <span class="marquee-dot"></span></span>
     </div>
 </div>
 
@@ -856,41 +977,104 @@
 <section class="stats">
     <div class="stats-grid">
         <div class="stat-item">
-            <div class="stat-number" data-target="500">0</div>
-            <div class="stat-label">Corporate Clients</div>
+            <div class="stat-number" data-target="3" data-suffix="">0</div>
+            <div class="stat-label" data-i18n="stat1">Pravca Usluge</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number" data-target="15">0</div>
-            <div class="stat-label">Years in Business</div>
+            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+            <div class="stat-label" data-i18n="stat2">Sveže, Tog Dana</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number" data-target="50">0</div>
-            <div class="stat-label">Healthy Recipes</div>
+            <div class="stat-number" data-target="5" data-suffix="">0</div>
+            <div class="stat-label" data-i18n="stat3">Dana Dostave (Wellness)</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number" data-target="100">0</div>
-            <div class="stat-label">Meals Delivered</div>
+            <div class="stat-number" data-target="10" data-suffix="+">0</div>
+            <div class="stat-label" data-i18n="stat4">Min. Obroka (Korporativno)</div>
         </div>
     </div>
 </section>
 
-<!-- TESTIMONIAL -->
-<section class="testimonial">
-    <div class="testimonial-inner">
-        <div class="section-label fade-in-up" style="color: var(--gold-light);" data-i18n="test_label">Testimonial</div>
-        <div class="hr-draw" style="background: var(--gold-light); margin-bottom: 3rem;"></div>
-        <p class="testimonial-quote" data-i18n="test_quote">"Swastha completely elevated our workplace. The daily healthy lunches keep our team energized and productive. It has been a fantastic addition to our company culture."</p>
-        <p class="testimonial-author" data-i18n="test_author">&mdash; Sarah T., HR Director</p>
-        <div class="quote-line"></div>
+<!-- WELLNESS PROGRAM -->
+<section class="wellness" id="wellness">
+    <div class="wellness-inner">
+        <div class="wellness-img fade-in-up">
+            <!-- NAPOMENA: privremena stock slika — zameni autentičnom -->
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="Individualno sastavljen wellness obrok" loading="lazy">
+        </div>
+        <div class="wellness-text fade-in-up">
+            <div class="section-label" data-i18n="wel_label">Wellness Program</div>
+            <h2 data-i18n="wel_title">Ishrana skrojena baš za vas.</h2>
+            <p data-i18n="wel_p1">Wellness Program je individualni pristup ishrani — bez univerzalnih menija. U saradnji sa nutricionistom analiziramo vaše ciljeve, navike i ukus, pa sastavljamo obroke na profesionalnoj nutritivnoj osnovi i dostavljamo ih direktno na vašu adresu.</p>
+            <ul class="wellness-points">
+                <li data-i18n="wel_pt1">Obroci individualno sastavljeni na profesionalnoj nutritivnoj osnovi</li>
+                <li data-i18n="wel_pt2">Dostava na vašu adresu, 5 dana u nedelji</li>
+                <li data-i18n="wel_pt3">Sve prilagođeno vašim ciljevima i ritmu</li>
+            </ul>
+            <p class="wellness-nutritionist" data-i18n="wel_note">U kooperaciji sa nutricionistom — svaki plan ima stručnu podlogu, a ne improvizaciju.</p>
+            <a href="#contact" class="cta-btn" style="margin-top:0.5rem;"><span data-i18n="wel_cta">Kontaktirajte nas</span><span class="arrow"></span></a>
+        </div>
+    </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="section-divider">
+    <svg viewBox="0 0 800 60" preserveAspectRatio="none">
+        <path class="divider-path draw-on-scroll" d="M0,30 C150,50 250,10 400,30 S650,50 800,30" />
+    </svg>
+</div>
+
+<!-- REFERENCES -->
+<section class="references" id="reference">
+    <div class="references-header">
+        <div class="section-label fade-in-up" data-i18n="ref_label">Reference</div>
+        <div class="hr-draw"></div>
+        <h2 class="references-title fade-in-up" data-i18n="ref_title">Sa Kim Radimo</h2>
+    </div>
+    <!-- NAPOMENA: zameni tekstualne čipove pravim logoima (drop-in <img src="logo-msa.png">) -->
+    <div class="logo-row fade-in-up">
+        <div class="logo-chip">
+            <span class="logo-fallback">MSA<small data-i18n="ref_msa_sub">Advokatska kancelarija</small></span>
+        </div>
+        <div class="logo-chip">
+            <span class="logo-fallback">MasterChef<small data-i18n="ref_mc_sub">Srbija</small></span>
+        </div>
+        <div class="logo-chip">
+            <span class="logo-fallback">Traitors<small data-i18n="ref_tr_sub">Srbija</small></span>
+        </div>
+    </div>
+    <div class="review-grid">
+        <div class="review-card fade-in-up">
+            <div class="quote-mark">&ldquo;</div>
+            <p data-i18n="ref_q1">Odličan, raznovrstan meni i ekipa na koju uvek možeš da računaš — hrana je stizala tačno na vreme, sveža i tačno onakva kakvu smo tražili, i kad je raspored bio najluđi.</p>
+            <div class="review-author">
+                <div class="review-avatar"></div>
+                <div>
+                    <div class="ra-name" data-i18n="ref_q1_name">Marija</div>
+                    <div class="ra-role" data-i18n="ref_q1_role">Producent, MasterChef Srbija</div>
+                </div>
+            </div>
+        </div>
+        <div class="review-card fade-in-up">
+            <div class="quote-mark">&ldquo;</div>
+            <p data-i18n="ref_q2">Svakodnevni obroci za našu kancelariju — supa, glavno jelo i salata, sve sveže pripremljeno tog dana. Tim je zadovoljan, a mi smo se rešili brige oko ručka.</p>
+            <div class="review-author">
+                <div class="review-avatar"></div>
+                <div>
+                    <div class="ra-name" data-i18n="ref_q2_name">MSA</div>
+                    <div class="ra-role" data-i18n="ref_q2_role">Advokatska kancelarija</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- INSTAGRAM FEED -->
 <section class="instagram-feed" id="instagram">
     <div class="instagram-feed-header">
-        <div class="section-label fade-in-up" data-i18n="insta_label">Follow Our Journey</div>
+        <div class="section-label fade-in-up" data-i18n="insta_label">Pratite Naš Put</div>
         <div class="hr-draw"></div>
-        <h2 class="instagram-feed-title fade-in-up" data-i18n="insta_title">From Our Kitchen</h2>
+        <h2 class="instagram-feed-title fade-in-up" data-i18n="insta_title">Iz Naše Kuhinje</h2>
         <a href="https://www.instagram.com/swastha_catering/" target="_blank" class="instagram-feed-handle fade-in-up">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5"/>
@@ -953,7 +1137,7 @@
     <div class="insta-follow-cta fade-in-up">
         <a href="https://www.instagram.com/swastha_catering/" target="_blank" class="insta-follow-btn">
             <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-            <span data-i18n="insta_follow">Follow on Instagram</span>
+            <span data-i18n="insta_follow">Pratite na Instagramu</span>
         </a>
     </div>
 </section>
@@ -969,15 +1153,15 @@
 <section class="contact-form-section" id="contact">
     <div class="contact-form-inner">
         <div style="text-align: center;">
-            <div class="section-label fade-in-up" data-i18n="contact_label">Get in Touch</div>
+            <div class="section-label fade-in-up" data-i18n="contact_label">Kontaktirajte Nas</div>
             <div class="hr-draw"></div>
-            <h2 class="cta-title fade-in-up" style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem;" data-i18n="contact_title">Let's Fuel<br>Your Team</h2>
-            <p class="fade-in-up" style="font-size: 0.95rem; color: #5a5550; font-weight: 300; max-width: 500px; margin: 0 auto;" data-i18n="contact_sub">Tell us about your team, and we'll craft a meal plan that fuels productivity and wellbeing.</p>
+            <h2 class="cta-title fade-in-up" style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem;" data-i18n="contact_title">Hajde da Vas<br>Nahranimo</h2>
+            <p class="fade-in-up" style="font-size: 0.95rem; color: #5a5550; font-weight: 300; max-width: 500px; margin: 0 auto;" data-i18n="contact_sub">Recite nam šta vam treba — produkcija, kancelarija ili individualni program — i kreiraćemo ponudu skrojenu za vas.</p>
         </div>
         <div class="contact-form-layout fade-in-up">
             <div class="contact-form-info">
-                <h3 data-i18n="contact_direct_title">Reach Out Directly</h3>
-                <p data-i18n="contact_direct_desc">Have a quick question? Contact us directly and we'll get back to you within 24 hours.</p>
+                <h3 data-i18n="contact_direct_title">Pišite Nam Direktno</h3>
+                <p data-i18n="contact_direct_desc">Imate brzo pitanje? Kontaktirajte nas direktno i javićemo vam se u roku od 24 sata.</p>
                 <div class="contact-info-item">
                     <svg viewBox="0 0 24 24"><path class="ci-icon" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path class="ci-icon" d="M22 6l-10 7L2 6"/></svg>
                     <a href="mailto:swasthabgd@gmail.com">swasthabgd@gmail.com</a>
@@ -994,54 +1178,54 @@
             <form class="contact-form" id="inquiryForm" onsubmit="handleFormSubmit(event)">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="formName" data-i18n="form_name">Your Name</label>
-                        <input type="text" id="formName" name="name" placeholder="John Doe" data-i18n-placeholder="form_name_ph" required>
+                        <label for="formName" data-i18n="form_name">Vaše Ime</label>
+                        <input type="text" id="formName" name="name" placeholder="Marko Marković" data-i18n-placeholder="form_name_ph" required>
                     </div>
                     <div class="form-group">
-                        <label for="formCompany" data-i18n="form_company">Company</label>
-                        <input type="text" id="formCompany" name="company" placeholder="Acme Corp" data-i18n-placeholder="form_company_ph">
+                        <label for="formCompany" data-i18n="form_company">Kompanija (opciono)</label>
+                        <input type="text" id="formCompany" name="company" placeholder="Acme d.o.o." data-i18n-placeholder="form_company_ph">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="formEmail" data-i18n="form_email">Email</label>
-                        <input type="email" id="formEmail" name="email" placeholder="john@company.com" data-i18n-placeholder="form_email_ph" required>
+                        <input type="email" id="formEmail" name="email" placeholder="marko@firma.com" data-i18n-placeholder="form_email_ph" required>
                     </div>
                     <div class="form-group">
-                        <label for="formPhone" data-i18n="form_phone">Phone</label>
+                        <label for="formPhone" data-i18n="form_phone">Telefon</label>
                         <input type="tel" id="formPhone" name="phone" placeholder="+381 ...">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="formService" data-i18n="form_service">Service Interested In</label>
+                    <label for="formService" data-i18n="form_service">Usluga za Koju Ste Zainteresovani</label>
                     <select id="formService" name="service" required>
-                        <option value="" disabled selected data-i18n="form_service_select">Select a service</option>
-                        <option value="daily-lunches" data-i18n="form_service_1">Daily Office Lunches</option>
-                        <option value="executive-dining" data-i18n="form_service_2">Executive Dining</option>
-                        <option value="wellness-programs" data-i18n="form_service_3">Team Wellness Programs</option>
-                        <option value="event-catering" data-i18n="form_service_4">Event Catering</option>
-                        <option value="custom" data-i18n="form_service_5">Custom Package</option>
+                        <option value="" disabled selected data-i18n="form_service_select">Izaberite uslugu</option>
+                        <option value="produkcija" data-i18n="form_service_1">Produkcija (ketering / craft service)</option>
+                        <option value="korporativni-ketering" data-i18n="form_service_2">Korporativni Ketering</option>
+                        <option value="wellness-program" data-i18n="form_service_3">Wellness Program</option>
+                        <option value="ostalo" data-i18n="form_service_5">Ostalo / Konsultacija</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="formTeamSize" data-i18n="form_team">Team Size</label>
+                    <label for="formTeamSize" data-i18n="form_team">Broj Osoba / Obroka (opciono)</label>
                     <select id="formTeamSize" name="team_size">
-                        <option value="" disabled selected data-i18n="form_team_select">Select range</option>
-                        <option value="1-20" data-i18n="form_team_1">1 - 20 people</option>
-                        <option value="21-50" data-i18n="form_team_2">21 - 50 people</option>
-                        <option value="51-100" data-i18n="form_team_3">51 - 100 people</option>
-                        <option value="100+" data-i18n="form_team_4">100+ people</option>
+                        <option value="" disabled selected data-i18n="form_team_select">Izaberite opseg</option>
+                        <option value="1" data-i18n="form_team_0">1 osoba (Wellness)</option>
+                        <option value="10-20" data-i18n="form_team_1">10 - 20</option>
+                        <option value="21-50" data-i18n="form_team_2">21 - 50</option>
+                        <option value="51-100" data-i18n="form_team_3">51 - 100</option>
+                        <option value="100+" data-i18n="form_team_4">100+</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="formMessage" data-i18n="form_message">Message</label>
-                    <textarea id="formMessage" name="message" rows="4" placeholder="Tell us about your catering needs, dietary requirements, or any questions..." data-i18n-placeholder="form_message_ph"></textarea>
+                    <label for="formMessage" data-i18n="form_message">Poruka</label>
+                    <textarea id="formMessage" name="message" rows="4" placeholder="Recite nam o svojim potrebama, dijetetskim zahtevima ili postavite pitanje..." data-i18n-placeholder="form_message_ph"></textarea>
                 </div>
-                <button type="submit" class="form-submit"><span data-i18n="form_send">Send Inquiry</span></button>
+                <button type="submit" class="form-submit"><span data-i18n="form_send">Pošaljite Upit</span></button>
             </form>
             <div class="form-success" id="formSuccess">
-                <h3 data-i18n="form_success_title">Thank You!</h3>
-                <p data-i18n="form_success_text">Your inquiry has been received. We'll get back to you within 24 hours with a tailored proposal.</p>
+                <h3 data-i18n="form_success_title">Hvala Vam!</h3>
+                <p data-i18n="form_success_text">Vaš upit je primljen. Javićemo vam se u roku od 24 sata sa prilagođenom ponudom.</p>
             </div>
         </div>
     </div>
@@ -1055,27 +1239,28 @@
         </div>
         <div class="footer-cols">
             <div class="footer-col">
-                <h4 data-i18n="footer_navigate">Navigate</h4>
-                <a href="#services" data-i18n="nav_services">Services</a>
-                <a href="corporate.html" data-i18n="nav_corporate">Corporate</a>
-                <a href="production.html" data-i18n="nav_production">Production</a>
+                <h4 data-i18n="footer_navigate">Navigacija</h4>
+                <a href="production.html" data-i18n="nav_production">Produkcija</a>
+                <a href="corporate.html" data-i18n="nav_corporate">Korporativno</a>
+                <a href="#wellness" data-i18n="nav_wellness">Wellness</a>
+                <a href="#reference" data-i18n="nav_reference">Reference</a>
                 <a href="blog.html" data-i18n="nav_blog">Blog</a>
-                <a href="#contact" data-i18n="nav_contact">Contact</a>
+                <a href="#contact" data-i18n="nav_contact">Kontakt</a>
             </div>
             <div class="footer-col">
-                <h4 data-i18n="footer_connect">Connect</h4>
+                <h4 data-i18n="footer_connect">Povežite Se</h4>
                 <a href="https://www.instagram.com/swastha_catering/" target="_blank">Instagram</a>
                 <a href="https://wa.me/381692726003" target="_blank">WhatsApp</a>
                 <a href="mailto:swasthabgd@gmail.com">Email</a>
             </div>
             <div class="footer-col">
-                <h4 data-i18n="footer_reach">Reach Us</h4>
+                <h4 data-i18n="footer_reach">Kontaktirajte Nas</h4>
                 <a href="mailto:swasthabgd@gmail.com">swasthabgd@gmail.com</a>
                 <a href="tel:+381692726003">+381 69 272 6003</a>
             </div>
         </div>
     </div>
-    <div class="footer-bottom">&copy; 2026 Swastha Catering. <span data-i18n="footer_rights">All rights reserved.</span></div>
+    <div class="footer-bottom">&copy; 2026 Swastha Catering. <span data-i18n="footer_rights">Sva prava zadržana.</span></div>
 </footer>
 
 <!-- WHATSAPP FLOATING BUTTON -->
@@ -1262,7 +1447,7 @@ const statsObs = new IntersectionObserver(entries => {
                     const start = performance.now();
                     function upd(now) {
                         const p = Math.min((now - start) / 2000, 1);
-                        n.textContent = Math.floor((1 - Math.pow(1 - p, 4)) * t) + '+';
+                        n.textContent = Math.floor((1 - Math.pow(1 - p, 4)) * t) + (n.dataset.suffix !== undefined ? n.dataset.suffix : '+');
                         if (p < 1) requestAnimationFrame(upd);
                     }
                     requestAnimationFrame(upd);
@@ -1357,66 +1542,96 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 // ===== LANGUAGE SWITCH =====
 const translations = {
-    sr: {
+    en: {
         // Nav
-        nav_services: "Usluge", nav_corporate: "Korporativno", nav_production: "Produkcija", nav_blog: "Blog", nav_contact: "Kontakt",
+        nav_corporate: "Corporate", nav_production: "Production", nav_wellness: "Wellness", nav_reference: "Clients", nav_blog: "Blog", nav_contact: "Contact",
         // Hero
-        hero_tag: "Korporativni Zdrav Ketering",
-        hero_sub: "Hranimo &nbsp;&middot; &nbsp;Energizujemo &nbsp;&middot; &nbsp;Uzdižemo",
+        hero_tag: "Healthy Catering &middot; Production &middot; Wellness",
+        hero_sub: "Nourish &nbsp;&middot; &nbsp;Energize &nbsp;&middot; &nbsp;Elevate",
         // Philosophy
-        phil_label: "Naša Filozofija",
-        phil_text: "Verujemo da sjajan rad počinje pravim gorivom. Naši obroci su osmišljeni sa namerom da nahrane vaš tim, povećaju produktivnost i neguju zdravu, naprednu kulturu na radnom mestu.",
+        phil_label: "Our Philosophy",
+        phil_text: "We believe every good day starts with the right fuel. We make every meal with intention — fresh, balanced and same-day — whether we are feeding a film crew on set, a team at the office, or one person committed to their health.",
         // Services
-        svc_label: "Šta Nudimo",
-        svc_title: "Osmišljena Iskustva",
-        svc1_title: "Dnevni Poslovni Ručkovi",
-        svc1_desc: "Zdravi, balansirani obroci pripremljeni svakodnevno da vaš tim održe energičnim i fokusiranim tokom radnog dana.",
-        svc2_title: "Egzekutivni Obrok",
-        svc2_desc: "Premium kulinarska iskustva dizajnirana za sastanke uprave, prezentacije klijentima i retreat-ove.",
-        svc3_title: "Programi Timskog Velnesa",
-        svc3_desc: "Sveobuhvatni planovi ishrane prilagođeni nutritivnom blagostanju vašeg tima, osiguravajući vrhunske performanse i zdravlje.",
+        svc_label: "What We Do",
+        svc_title: "Three Ways We Feed You",
+        svc_cta: "Learn more",
+        svc1_title: "Production",
+        svc1_desc: "We feed film and television productions — from early call times to late-night shoots. Fresh, balanced catering and craft service that keep the whole crew moving, with no downtime and no drama.",
+        svc1_p1: "Catering — full meals for cast and crew, including breakfast on set",
+        svc1_p2: "Craft service — fresh snacks, fruit and drinks available throughout the shoot",
+        svc2_title: "Corporate Catering",
+        svc2_desc: "A fresh, complete meal delivered to your office — prepared and packed the same day. No cooking, no hassle, no compromise on your team's health.",
+        svc2_p1: "Meals include soup/potage, a main course and a salad — all packed and prepared the same day",
+        svc2_p2: "Minimum order: 10 meals",
+        svc3_title: "Wellness Program",
+        svc3_desc: "An individual nutrition plan built just for you. Together with a nutritionist we compose meals on a professional nutritional basis — tailored to your goals, taste and rhythm.",
+        svc3_p1: "Meals individually composed on a professional nutritional basis, in cooperation with a nutritionist — delivered to your address",
+        svc3_p2: "5 days a week",
         // Gallery
-        gal_label: "Naš Rad",
-        gal_title: "Ukus Elegancije",
-        // Testimonial
-        test_label: "Preporuka",
-        test_quote: "\"Swastha je potpuno podigla naše radno okruženje. Svakodnevni zdravi ručkovi održavaju naš tim energičnim i produktivnim. Bio je to fantastičan dodatak kulturi naše kompanije.\"",
-        test_author: "&mdash; Sara T., HR Direktor",
+        gal_label: "Our Work",
+        gal_title: "Fresh, Every Day",
+        gal_c1: "Production &amp; Craft Service",
+        gal_c2: "Corporate Meals",
+        gal_c3: "Wellness Meals",
+        gal_c4: "Seasonal &amp; Fresh Produce",
+        // Stats
+        stat1: "Service Directions", stat2: "Fresh, Same Day", stat3: "Delivery Days (Wellness)", stat4: "Min. Meals (Corporate)",
+        // Wellness
+        wel_label: "Wellness Program",
+        wel_title: "Nutrition tailored just for you.",
+        wel_p1: "The Wellness Program is an individual approach to nutrition — no one-size-fits-all menus. Together with a nutritionist we analyze your goals, habits and taste, then compose meals on a professional nutritional basis and deliver them straight to your door.",
+        wel_pt1: "Meals individually composed on a professional nutritional basis",
+        wel_pt2: "Delivered to your address, 5 days a week",
+        wel_pt3: "Everything adapted to your goals and rhythm",
+        wel_note: "In cooperation with a nutritionist — every plan has expert grounding, not guesswork.",
+        wel_cta: "Contact us",
+        // References
+        ref_label: "Clients",
+        ref_title: "Who We Work With",
+        ref_msa_sub: "Law Firm",
+        ref_mc_sub: "Serbia",
+        ref_tr_sub: "Serbia",
+        ref_q1: "An excellent, varied menu and a team you can always count on — the food arrived right on time, fresh and exactly as we asked, even when the schedule was at its craziest.",
+        ref_q1_name: "Marija",
+        ref_q1_role: "Producer, MasterChef Serbia",
+        ref_q2: "Daily meals for our office — soup, a main course and a salad, all freshly prepared the same day. The team is happy and lunch is one less thing to worry about.",
+        ref_q2_name: "MSA",
+        ref_q2_role: "Law Firm",
         // Instagram
-        insta_label: "Pratite Naš Put",
-        insta_title: "Iz Naše Kuhinje",
-        insta_follow: "Pratite na Instagramu",
+        insta_label: "Follow Our Journey",
+        insta_title: "From Our Kitchen",
+        insta_follow: "Follow on Instagram",
         // Contact
-        contact_label: "Kontaktirajte Nas",
-        contact_title: "Hajde da Nahranimo<br>Vaš Tim",
-        contact_sub: "Recite nam o svom timu, a mi ćemo kreirati plan ishrane koji podstiče produktivnost i blagostanje.",
-        contact_direct_title: "Pišite Nam Direktno",
-        contact_direct_desc: "Imate brzo pitanje? Kontaktirajte nas direktno i javićemo vam se u roku od 24 sata.",
-        form_send: "Pošaljite Upit",
-        form_name: "Vaše Ime", form_name_ph: "Marko Marković",
-        form_company: "Kompanija", form_company_ph: "Acme d.o.o.",
-        form_email: "Email", form_email_ph: "marko@firma.com",
-        form_phone: "Telefon",
-        form_service: "Usluga za Koju Ste Zainteresovani",
-        form_service_select: "Izaberite uslugu",
-        form_service_1: "Dnevni Ručkovi za Firme",
-        form_service_2: "Ekskluzivno Serviranje",
-        form_service_3: "Programi Velnesa za Tim",
-        form_service_4: "Ketering za Događaje",
-        form_service_5: "Prilagođeni Paket",
-        form_team: "Veličina Tima",
-        form_team_select: "Izaberite opseg",
-        form_team_1: "1 - 20 ljudi",
-        form_team_2: "21 - 50 ljudi",
-        form_team_3: "51 - 100 ljudi",
-        form_team_4: "100+ ljudi",
-        form_message: "Poruka",
-        form_message_ph: "Recite nam o svojim potrebama za keteringom, dijetetskim zahtevima ili postavite pitanje...",
-        form_success_title: "Hvala Vam!",
-        form_success_text: "Vaš upit je primljen. Javićemo vam se u roku od 24 sata sa prilagođenom ponudom.",
+        contact_label: "Get in Touch",
+        contact_title: "Let Us Feed<br>You",
+        contact_sub: "Tell us what you need — production, office or an individual program — and we'll craft a proposal tailored to you.",
+        contact_direct_title: "Reach Out Directly",
+        contact_direct_desc: "Have a quick question? Contact us directly and we'll get back to you within 24 hours.",
+        form_send: "Send Inquiry",
+        form_name: "Your Name", form_name_ph: "John Doe",
+        form_company: "Company (optional)", form_company_ph: "Acme Corp",
+        form_email: "Email", form_email_ph: "john@company.com",
+        form_phone: "Phone",
+        form_service: "Service Interested In",
+        form_service_select: "Select a service",
+        form_service_1: "Production (catering / craft service)",
+        form_service_2: "Corporate Catering",
+        form_service_3: "Wellness Program",
+        form_service_5: "Other / Consultation",
+        form_team: "Number of People / Meals (optional)",
+        form_team_select: "Select range",
+        form_team_0: "1 person (Wellness)",
+        form_team_1: "10 - 20",
+        form_team_2: "21 - 50",
+        form_team_3: "51 - 100",
+        form_team_4: "100+",
+        form_message: "Message",
+        form_message_ph: "Tell us about your needs, dietary requirements, or any questions...",
+        form_success_title: "Thank You!",
+        form_success_text: "Your inquiry has been received. We'll get back to you within 24 hours with a tailored proposal.",
         // Footer
-        footer_navigate: "Navigacija", footer_connect: "Povežite Se", footer_reach: "Kontaktirajte Nas",
-        footer_rights: "Sva prava zadržana.",
+        footer_navigate: "Navigate", footer_connect: "Connect", footer_reach: "Reach Us",
+        footer_rights: "All rights reserved.",
     }
 };
 
@@ -1425,36 +1640,36 @@ function setLanguage(lang) {
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
     document.documentElement.lang = lang;
 
-    if (lang === 'sr') {
+    if (lang === 'en') {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.dataset.i18n;
-            if (translations.sr[key]) {
+            if (translations.en[key]) {
                 if (el.tagName === 'OPTION') {
-                    if (!el.dataset.enOriginal) el.dataset.enOriginal = el.textContent;
-                    el.textContent = translations.sr[key];
+                    if (el.dataset.srOriginal === undefined) el.dataset.srOriginal = el.textContent;
+                    el.textContent = translations.en[key];
                     return;
                 }
-                if (!el.dataset.enOriginal) el.dataset.enOriginal = el.innerHTML;
-                el.innerHTML = translations.sr[key];
+                if (el.dataset.srOriginal === undefined) el.dataset.srOriginal = el.innerHTML;
+                el.innerHTML = translations.en[key];
             }
         });
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             const key = el.dataset.i18nPlaceholder;
-            if (translations.sr[key]) {
-                if (!el.dataset.enPlaceholder) el.dataset.enPlaceholder = el.getAttribute('placeholder') || '';
-                el.setAttribute('placeholder', translations.sr[key]);
+            if (translations.en[key]) {
+                if (el.dataset.srPlaceholder === undefined) el.dataset.srPlaceholder = el.getAttribute('placeholder') || '';
+                el.setAttribute('placeholder', translations.en[key]);
             }
         });
         reinitPhilosophy();
     } else {
         document.querySelectorAll('[data-i18n]').forEach(el => {
-            if (el.dataset.enOriginal) {
-                if (el.tagName === 'OPTION') el.textContent = el.dataset.enOriginal;
-                else el.innerHTML = el.dataset.enOriginal;
+            if (el.dataset.srOriginal !== undefined) {
+                if (el.tagName === 'OPTION') el.textContent = el.dataset.srOriginal;
+                else el.innerHTML = el.dataset.srOriginal;
             }
         });
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-            if (el.dataset.enPlaceholder !== undefined) el.setAttribute('placeholder', el.dataset.enPlaceholder);
+            if (el.dataset.srPlaceholder !== undefined) el.setAttribute('placeholder', el.dataset.srPlaceholder);
         });
         reinitPhilosophy();
     }
@@ -1473,7 +1688,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 
 window.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('swastha-lang');
-    if (saved && saved !== 'en') setLanguage(saved);
+    if (saved === 'en') setLanguage('en');
 });
 
 // Contact form handler

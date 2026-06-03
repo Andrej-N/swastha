@@ -1,0 +1,5 @@
+# Lokalni alati / privremeno
+.tools/
+
+# Izvorni arhivi (ne treba u repou)
+*.zip
