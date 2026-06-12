@@ -29,12 +29,19 @@
     <!-- Blog Listing -->
     <url>
         <loc>https://swasthacatering.com/blog.html</loc>
-        <lastmod>2026-05-10</lastmod>
+        <lastmod>2026-06-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Blog Posts -->
+    <url>
+        <loc>https://swasthacatering.com/blog-velnes-program-ishrane.html</loc>
+        <lastmod>2026-06-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <url>
         <loc>https://swasthacatering.com/blog-poslovni-dorucak-za-firme.html</loc>
         <lastmod>2026-05-10</lastmod>
