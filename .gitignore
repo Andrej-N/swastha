@@ -3,3 +3,6 @@
 
 # Izvorni arhivi (ne treba u repou)
 *.zip
+
+# Sirove foto originale sa snimanja (~25MB svaki) — u repou idu samo web-optimizovane swastha-*.jpg
+images/IMG_*.jpg

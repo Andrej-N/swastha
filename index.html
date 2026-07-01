@@ -665,6 +665,18 @@
         }
         .insta-item:hover .insta-overlay { opacity: 1; }
         .insta-overlay svg { width: 28px; height: 28px; fill: #fff; }
+        /* --- KITCHEN / BEHIND-THE-SCENES VIDEO --- */
+        .kitchen-inner {
+            display: grid; grid-template-columns: 0.8fr 1fr; gap: 4.5rem;
+            align-items: center; max-width: 1000px; margin: 0 auto;
+        }
+        .kv-video {
+            position: relative; aspect-ratio: 9/16; width: 100%; max-width: 340px;
+            margin: 0 auto; overflow: hidden; border-radius: 6px; background: var(--ink);
+            box-shadow: 0 34px 70px -34px rgba(26,22,18,0.55);
+        }
+        .kv-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .kv-text p { font-size: 0.98rem; line-height: 1.9; color: #5a5550; margin-bottom: 1.4rem; }
         .insta-follow-cta {
             text-align: center; margin-top: 3rem;
         }
@@ -724,6 +736,8 @@
             .contact-form-layout { grid-template-columns: 1fr; gap: 2.5rem; }
             .form-row { grid-template-columns: 1fr; }
             .insta-grid { grid-template-columns: repeat(2, 1fr); }
+            .kitchen-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+            .kv-text { max-width: 440px; margin: 0 auto; }
             .whatsapp-tooltip { display: none; }
             .wellness { padding: 5rem 1.5rem; }
             .wellness-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -922,7 +936,7 @@
         <div class="hr-draw"></div>
         <h2 class="showcase-title fade-in-up" data-i18n="gal_title">Sveže, Svakog Dana</h2>
     </div>
-    <!-- NAPOMENA: slike su privremene (stock). Zameni ih svojim autentičnim fotografijama nakon snimanja. -->
+    <!-- NAPOMENA: 2. i 4. pločica su autentične fotografije (photoshoot). 1. (Produkcija) i 3. (Fitnes) su još privremeni stock — zameni kad stignu snimci. -->
     <div class="showcase-grid">
         <div class="showcase-item">
             <div class="reveal-mask"></div>
@@ -934,7 +948,7 @@
         <div class="showcase-item">
             <div class="reveal-mask"></div>
             <div class="showcase-img-wrap">
-                <img class="showcase-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" alt="Korporativni obroci u kutijama">
+                <img class="showcase-img" src="images/swastha-korporativni-obroci.jpg" alt="Korporativni obroci u SWASTHA kutijama — rižoto i losos sa šparglama" loading="lazy">
             </div>
             <div class="showcase-overlay"><span data-i18n="gal_c2">Korporativni Obroci</span></div>
         </div>
@@ -948,7 +962,7 @@
         <div class="showcase-item">
             <div class="reveal-mask"></div>
             <div class="showcase-img-wrap">
-                <img class="showcase-img" src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1200&q=80" alt="Sveže salate i namirnice">
+                <img class="showcase-img" src="images/swastha-meni-spread.jpg" alt="Ceo SWASTHA meni — rižoto, losos, supe, salate i sveže namirnice" loading="lazy">
             </div>
             <div class="showcase-overlay"><span data-i18n="gal_c4">Sezonske &amp; Sveže Namirnice</span></div>
         </div>
@@ -999,8 +1013,7 @@
 <section class="wellness" id="wellness">
     <div class="wellness-inner">
         <div class="wellness-img fade-in-up">
-            <!-- NAPOMENA: privremena stock slika — zameni autentičnom -->
-            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="Individualno sastavljen fitnes obrok" loading="lazy">
+            <img src="images/swastha-fitnes-obrok.jpg" alt="Individualno sastavljen SWASTHA fitnes obrok — rižoto i losos u brendiranoj ambalaži" loading="lazy">
         </div>
         <div class="wellness-text fade-in-up">
             <div class="section-label" data-i18n="wel_label">Fitnes Program</div>
@@ -1075,64 +1088,25 @@
         <div class="section-label fade-in-up" data-i18n="insta_label">Pratite Naš Put</div>
         <div class="hr-draw"></div>
         <h2 class="instagram-feed-title fade-in-up" data-i18n="insta_title">Iz Naše Kuhinje</h2>
-        <a href="https://www.instagram.com/swastha_catering/" target="_blank" class="instagram-feed-handle fade-in-up">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5"/>
-                <circle cx="12" cy="12" r="5"/>
-                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
-            </svg>
-            @swastha_catering
-        </a>
     </div>
-    <div class="insta-grid" id="instaGrid">
-        <a class="insta-item" href="https://www.instagram.com/swastha_catering/" target="_blank">
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Fresh healthy bowl" loading="lazy">
-            <div class="insta-overlay">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
-            </div>
-        </a>
-        <a class="insta-item" href="https://www.instagram.com/swastha_catering/" target="_blank">
-            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" alt="Colorful salad plate" loading="lazy">
-            <div class="insta-overlay">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
-            </div>
-        </a>
-        <a class="insta-item" href="https://www.instagram.com/swastha_catering/" target="_blank">
-            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=500&q=80" alt="Fresh ingredients spread" loading="lazy">
-            <div class="insta-overlay">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
-            </div>
-        </a>
-        <a class="insta-item" href="https://www.instagram.com/swastha_catering/" target="_blank">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=80" alt="Gourmet plated dish" loading="lazy">
-            <div class="insta-overlay">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
-            </div>
-        </a>
-        <a class="insta-item" href="https://www.instagram.com/swastha_catering/" target="_blank">
-            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=500&q=80" alt="Healthy meal prep" loading="lazy">
-            <div class="insta-overlay">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
-            </div>
-        </a>
-        <a class="insta-item" href="https://www.instagram.com/swastha_catering/" target="_blank">
-            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" alt="Catering buffet setup" loading="lazy">
-            <div class="insta-overlay">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
-            </div>
-        </a>
-        <a class="insta-item" href="https://www.instagram.com/swastha_catering/" target="_blank">
-            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=500&q=80" alt="Fresh food arrangement" loading="lazy">
-            <div class="insta-overlay">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
-            </div>
-        </a>
-        <a class="insta-item" href="https://www.instagram.com/swastha_catering/" target="_blank">
-            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80" alt="Dessert and snacks" loading="lazy">
-            <div class="insta-overlay">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
-            </div>
-        </a>
+    <div class="kitchen-inner fade-in-up">
+        <div class="kv-video">
+            <video controls preload="metadata" playsinline poster="videos/kitchen-poster.jpg">
+                <source src="videos/VIDEO-2026-06-23-06-06-57.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="kv-text">
+            <p data-i18n="kitchen_p1">Svaki obrok nastaje kod nas — u sopstvenoj kuhinji, sveže pripremljen istog dana. Bez poluproizvoda i prečica: samo sveže namirnice, pažljiva priprema i tim koji svaki tanjir shvata lično.</p>
+            <p data-i18n="kitchen_p2">Zavirite iza kulisa i pratite nas na Instagramu — tu, iz dana u dan, delimo šta se sprema.</p>
+            <a href="https://www.instagram.com/swastha_catering/" target="_blank" class="instagram-feed-handle" style="margin-top:0.5rem;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="5"/>
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+                </svg>
+                @swastha_catering
+            </a>
+        </div>
     </div>
     <div class="insta-follow-cta fade-in-up">
         <a href="https://www.instagram.com/swastha_catering/" target="_blank" class="insta-follow-btn">
@@ -1597,9 +1571,11 @@ const translations = {
         ref_q2: "Daily meals for our office — soup, a main course and a salad, all freshly prepared the same day. The team is happy and lunch is one less thing to worry about.",
         ref_q2_name: "MSA",
         ref_q2_role: "Law Firm",
-        // Instagram
+        // Instagram / Kitchen
         insta_label: "Follow Our Journey",
         insta_title: "From Our Kitchen",
+        kitchen_p1: "Every meal is made in-house — in our own kitchen, freshly prepared the same day. No shortcuts, no semi-finished products: just fresh ingredients, careful preparation and a team that takes every plate personally.",
+        kitchen_p2: "Take a look behind the scenes and follow us on Instagram — that's where we share what's cooking, day by day.",
         insta_follow: "Follow on Instagram",
         // Contact
         contact_label: "Get in Touch",
