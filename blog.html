@@ -392,24 +392,62 @@
     <!-- Blog Grid -->
     <div class="blog-grid" id="blogGrid">
 
-        <!-- FEATURED POST (POST 11 - Allergies & Special Diets) -->
-        <article class="blog-card featured" data-category="corporate-catering">
+        <!-- FEATURED POST (POST 13 - Sustainable Catering) -->
+        <article class="blog-card featured" data-category="food-trends">
             <div class="blog-inner">
                 <div class="blog-card-img">
-                    <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=900&q=80" alt="A varied catering spread with clearly separated dishes for different dietary needs" loading="lazy">
-                    <span class="blog-card-category" data-i18n="filter_corporate">Corporate Catering</span>
+                    <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=900&q=80" alt="Fresh seasonal vegetables sourced from local producers" loading="lazy">
+                    <span class="blog-card-category" data-i18n="filter_trends">Food Trends</span>
                 </div>
                 <div class="blog-card-body">
-                    <div class="blog-card-date" data-i18n="post11_date">July 1, 2026</div>
+                    <div class="blog-card-date" data-i18n="post13_date">July 12, 2026</div>
                     <h2 class="blog-card-title">
-                        <a href="blog-ketering-alergije-ishrana.html" data-i18n="post11_title">Allergies & Special Diets in Catering: How a Professional Kitchen Keeps Everyone Safe</a>
+                        <a href="blog-odrziv-ketering.html" data-i18n="post13_title">Sustainable Catering: Seasonal Ingredients, Local Suppliers, and Less Food Waste</a>
                     </h2>
-                    <p class="blog-card-excerpt" data-i18n="post11_excerpt">In any group of thirty people, someone cannot eat something. How professional catering manages allergies and special diets through clear information, honest labeling, and disciplined kitchen separation...</p>
-                    <a href="blog-ketering-alergije-ishrana.html" class="blog-card-link">
+                    <p class="blog-card-excerpt" data-i18n="post13_excerpt">Sustainability in a kitchen is not a logo on a menu. It comes down to what you buy, when you buy it, and how much of it ends up in the bin. Cooking the Serbian season, sourcing close to home, and cutting food waste...</p>
+                    <a href="blog-odrziv-ketering.html" class="blog-card-link">
                         <span data-i18n="read_more">Read More</span>
                         <span class="arrow"></span>
                     </a>
                 </div>
+            </div>
+        </article>
+
+        <!-- POST 12 (Afternoon Energy Crash) -->
+        <article class="blog-card" data-category="healthy-eating">
+            <div class="blog-card-img">
+                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600&q=80" alt="A balanced lunch bowl with vegetables, grains, and protein" loading="lazy">
+                <span class="blog-card-category" data-i18n="filter_healthy">Healthy Eating</span>
+            </div>
+            <div class="blog-card-body">
+                <div class="blog-card-date" data-i18n="post12_date">July 8, 2026</div>
+                <h2 class="blog-card-title">
+                    <a href="blog-popodnevni-pad-energije.html" data-i18n="post12_title">The Afternoon Energy Crash: How Lunch Decides the Rest of the Workday</a>
+                </h2>
+                <p class="blog-card-excerpt" data-i18n="post12_excerpt">The 2pm slump is rarely a discipline problem, it is usually a lunch that was designed by accident to cause it. How protein, vegetables, and portion size decide the second half of your team's working day...</p>
+                <a href="blog-popodnevni-pad-energije.html" class="blog-card-link">
+                    <span data-i18n="read_more">Read More</span>
+                    <span class="arrow"></span>
+                </a>
+            </div>
+        </article>
+
+        <!-- POST 11 (Allergies & Special Diets) -->
+        <article class="blog-card" data-category="corporate-catering">
+            <div class="blog-card-img">
+                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=600&q=80" alt="A varied catering spread with clearly separated dishes for different dietary needs" loading="lazy">
+                <span class="blog-card-category" data-i18n="filter_corporate">Corporate Catering</span>
+            </div>
+            <div class="blog-card-body">
+                <div class="blog-card-date" data-i18n="post11_date">July 1, 2026</div>
+                <h2 class="blog-card-title">
+                    <a href="blog-ketering-alergije-ishrana.html" data-i18n="post11_title">Allergies & Special Diets in Catering: How a Professional Kitchen Keeps Everyone Safe</a>
+                </h2>
+                <p class="blog-card-excerpt" data-i18n="post11_excerpt">In any group of thirty people, someone cannot eat something. How professional catering manages allergies and special diets through clear information, honest labeling, and disciplined kitchen separation...</p>
+                <a href="blog-ketering-alergije-ishrana.html" class="blog-card-link">
+                    <span data-i18n="read_more">Read More</span>
+                    <span class="arrow"></span>
+                </a>
             </div>
         </article>
 
@@ -739,6 +777,12 @@ const translations = {
         filter_corporate: "Korporativni Ketering",
         filter_trends: "Food Trendovi",
         filter_wellness: "Fitnes",
+        post13_date: "12. jul 2026.",
+        post13_title: "Održiv Ketering: Sezonski Sastojci, Lokalni Dobavljači i Manje Bacanja Hrane",
+        post13_excerpt: "Održivost u kuhinji nije logo na meniju. Svodi se na to šta kupujete, kada to kupujete i koliko toga završi u kanti. Kuvanje srpske sezone, nabavka blizu kuće i manje bacanja hrane...",
+        post12_date: "8. jul 2026.",
+        post12_title: "Popodnevni Pad Energije: Kako Ručak Određuje Ostatak Radnog Dana",
+        post12_excerpt: "Pad u dva popodne retko je problem discipline, najčešće je to ručak koji je slučajno napravljen tako da ga izazove. Kako protein, povrće i veličina porcije odlučuju o drugoj polovini radnog dana vašeg tima...",
         post11_date: "1. jul 2026.",
         post11_title: "Alergije i Posebni Režimi Ishrane u Keteringu: Kako Profesionalna Kuhinja Čuva Bezbednost Svih",
         post11_excerpt: "U svakoj grupi od trideset ljudi, neko nešto ne sme da jede. Kako profesionalni ketering upravlja alergijama i posebnim režimima ishrane kroz jasne informacije, iskreno označavanje i disciplinovano razdvajanje u kuhinji...",
