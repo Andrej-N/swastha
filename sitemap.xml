@@ -29,12 +29,40 @@
     <!-- Blog Listing -->
     <url>
         <loc>https://swasthacatering.com/blog.html</loc>
-        <lastmod>2026-07-29</lastmod>
+        <lastmod>2026-08-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Blog Posts -->
+    <url>
+        <loc>https://swasthacatering.com/blog-ketering-za-snimanja.html</loc>
+        <lastmod>2026-08-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://swasthacatering.com/blog-cena-filmskog-keteringa.html</loc>
+        <lastmod>2026-08-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://swasthacatering.com/blog-ketering-na-lokaciji.html</loc>
+        <lastmod>2026-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://swasthacatering.com/blog-craft-service-sto.html</loc>
+        <lastmod>2026-08-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <url>
         <loc>https://swasthacatering.com/blog-cena-keteringa-po-osobi.html</loc>
         <lastmod>2026-07-29</lastmod>
