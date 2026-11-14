@@ -29,12 +29,30 @@
     <!-- Blog Listing -->
     <url>
         <loc>https://swasthacatering.com/blog.html</loc>
-        <lastmod>2026-11-04</lastmod>
+        <lastmod>2026-11-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Blog Posts -->
+    <url>
+        <loc>https://swasthacatering.com/blog-koktel-ketering.html</loc>
+        <lastmod>2026-11-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://swasthacatering.com/blog-ketering-za-rodjendan.html</loc>
+        <lastmod>2026-11-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://swasthacatering.com/blog-zdrava-hrana-dostava.html</loc>
+        <lastmod>2026-11-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
     <url>
         <loc>https://swasthacatering.com/blog-novogodisnji-ketering-za-firme.html</loc>
         <lastmod>2026-11-04</lastmod>
