@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Korporativni Ketering Beograd | Swastha Catering</title>
-    <meta name="description" content="Korporativni ketering u Beogradu: svež, kompletan obrok (supa, glavno jelo, salata) pripremljen i upakovan istog dana, dostavljen u vašu kancelariju. Minimum 10 obroka. Swastha Catering.">
-    <meta name="keywords" content="korporativni ketering beograd, ketering za firme, dostava obroka za kancelariju, poslovni ručak beograd, zdravi obroci za firme, corporate catering belgrade">
+    <title>Ketering za Firme Beograd, Skuvano Tog Jutra | Swastha Catering</title>
+    <meta name="description" content="Ketering za firme u Beogradu: svaki obrok kuvamo istog jutra kada ga isporučujemo, od kvalitetnih namirnica, bez ostataka od prethodnog dana. Za korporacije i male timove. Swastha Catering.">
+    <meta name="keywords" content="korporativni ketering beograd, ketering za firme, ketering za kompanije, dnevni obroci za zaposlene, ručak za zaposlene, dostava obroka za kancelariju, poslovni ručak beograd, zdravi obroci za firme, corporate catering belgrade">
     <link rel="canonical" href="https://swasthacatering.com/corporate.html">
 
-    <meta property="og:title" content="Korporativni Ketering Beograd | Swastha Catering">
-    <meta property="og:description" content="Svež, kompletan obrok (supa, glavno jelo, salata) pripremljen tog dana i dostavljen u vašu kancelariju. Minimum 10 obroka.">
+    <meta property="og:title" content="Ketering za Firme Beograd, Skuvano Tog Jutra | Swastha Catering">
+    <meta property="og:description" content="Svaki obrok kuvamo istog jutra kada ga isporučujemo, bez ostataka i od kvalitetnih namirnica. Za korporacije i male timove.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://swasthacatering.com/corporate.html">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1400&q=80">
+    <meta property="og:image" content="https://swasthacatering.com/images/swastha-tuna-obrok-kutija.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -89,8 +89,8 @@
         }
         .page-hero-img {
             position: absolute; inset: 0; z-index: 0;
-            background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=2000&q=80');
-            background-size: cover; background-position: center;
+            background-image: url('images/swastha-tuna-obrok-kutija.jpg');
+            background-size: cover; background-position: center 65%;
             filter: brightness(0.55);
         }
         .page-hero-content { position: relative; z-index: 2; color: #fff; max-width: 960px; }
@@ -211,6 +211,8 @@
             border: 1px solid var(--ink);
         }
         .cta-btn:hover { background: transparent; color: var(--ink); }
+        .hero-cta { margin-top: 2.2rem; background: #fff; color: var(--ink); border-color: #fff; }
+        .hero-cta:hover { background: transparent; color: #fff; }
 
         /* POINTS */
         .points-block { background: var(--warm); padding: 6rem 2rem; }
@@ -227,6 +229,48 @@
         .ref-logo { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; letter-spacing: 0.18em; margin-bottom: 2rem; color: var(--ink); }
 
         @media (max-width: 768px) { .points-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+        /* FRESH PROMISE (skuvano tog jutra) */
+        .fresh {
+            display: grid; grid-template-columns: 1fr 1fr; max-width: 1500px; margin: 0 auto;
+        }
+        .fresh-img { min-height: 640px; overflow: hidden; }
+        .fresh-img img { width: 100%; height: 100%; object-fit: cover; }
+        .fresh-text {
+            padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center;
+            background: var(--ink); color: var(--bg);
+        }
+        .fresh-text .section-label { color: var(--gold); }
+        .fresh-text h2 { font-size: clamp(1.9rem, 3.2vw, 2.7rem); line-height: 1.2; margin-bottom: 1.4rem; }
+        .fresh-text > p { font-size: 1rem; opacity: 0.8; line-height: 1.85; margin-bottom: 2.2rem; }
+        .fresh-list { list-style: none; display: grid; gap: 1.4rem; }
+        .fresh-list li { display: grid; grid-template-columns: 2.4rem 1fr; gap: 0.4rem 1rem; }
+        .fresh-list .fl-num { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--gold); padding-top: 0.2rem; }
+        .fresh-list strong { display: block; font-weight: 400; font-size: 1.02rem; letter-spacing: 0.02em; margin-bottom: 0.2rem; }
+        .fresh-list span.fl-d { font-size: 0.9rem; opacity: 0.72; line-height: 1.65; }
+
+        /* AUDIENCE (korporacije / mali timovi) */
+        .audience { max-width: 1100px; margin: 0 auto; padding: 7rem 2rem 2rem; }
+        .audience-head { text-align: center; margin-bottom: 3.5rem; }
+        .audience-head h2 { font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.3; }
+        .audience-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 1.5rem; }
+        .aud-card { border: 1px solid var(--border); padding: 2.8rem 2.4rem; background: #fff; }
+        .aud-card.primary { background: var(--warm); border-color: transparent; }
+        .aud-tag { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--line-color); margin-bottom: 1rem; }
+        .aud-card h3 { font-size: 1.5rem; line-height: 1.3; margin-bottom: 1rem; }
+        .aud-card p { font-size: 0.95rem; color: #555; line-height: 1.75; margin-bottom: 1.2rem; }
+        .aud-card ul { list-style: none; display: grid; gap: 0.6rem; }
+        .aud-card li { font-size: 0.92rem; color: #444; padding-left: 1.4rem; position: relative; }
+        .aud-card li::before { content: ''; position: absolute; left: 0; top: 0.75em; width: 0.7rem; height: 1px; background: var(--gold); }
+
+        @media (max-width: 900px) {
+            .fresh { grid-template-columns: 1fr; }
+            .fresh-img { min-height: 380px; }
+            .fresh-text { padding: 4rem 1.75rem; }
+            .audience { padding: 5rem 1.25rem 1rem; }
+            .audience-grid { grid-template-columns: 1fr; }
+            .aud-card { padding: 2.2rem 1.6rem; }
+        }
 
         /* FOOTER */
         footer {
@@ -306,8 +350,8 @@
         <span class="nav-logo-text">Swastha</span>
     </a>
     <ul class="nav-links" id="navLinks">
-        <li><a href="production.html" data-i18n="nav_production">Produkcija</a></li>
         <li><a href="corporate.html" class="active" data-i18n="nav_corporate">Korporativno</a></li>
+        <li><a href="production.html" data-i18n="nav_production">Produkcija</a></li>
         <li><a href="index.html#wellness" data-i18n="nav_wellness">Fitnes</a></li>
         <li><a href="index.html#reference" data-i18n="nav_reference">Reference</a></li>
         <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
@@ -334,9 +378,10 @@
 <section class="page-hero">
     <div class="page-hero-img"></div>
     <div class="page-hero-content">
-        <p class="page-hero-tag" data-i18n="hero_tag">Korporativni Ketering</p>
-        <h1 class="page-hero-title" data-i18n="hero_title">Svež obrok, dostavljen u vašu kancelariju</h1>
-        <p class="page-hero-sub" data-i18n="hero_sub">Supa, glavno jelo i salata — pripremljeno i upakovano istog dana. Bez kuvanja, bez gužve, bez kompromisa po zdravlje tima.</p>
+        <p class="page-hero-tag" data-i18n="hero_tag">Ketering za Firme &middot; Beograd</p>
+        <h1 class="page-hero-title" data-i18n="hero_title">Ručak za vaš tim, skuvan jutros</h1>
+        <p class="page-hero-sub" data-i18n="hero_sub">Svaki obrok kuvamo istog jutra kada ga isporučujemo, od kvalitetnih namirnica i bez ostataka od prethodnog dana. Za korporacije i male timove.</p>
+        <a href="index.html#contact" class="cta-btn hero-cta" data-i18n="hero_cta">Zatražite Ponudu</a>
     </div>
 </section>
 
@@ -345,7 +390,53 @@
     <p class="section-label fade-in-up" data-i18n="intro_label">Kako Funkcioniše</p>
     <div class="hr-draw"></div>
     <h2 class="fade-in-up" data-i18n="intro_title">Zdrav ručak za ceo tim, bez brige.</h2>
-    <p class="fade-in-up" data-i18n="intro_text">Svaki obrok pripremamo i pakujemo istog dana — supa ili potaž, glavno jelo i salata, sve u jednom paketu, spremno za serviranje. Vaš tim dobija svež, izbalansiran ručak, a vi se rešavate organizacije, dostave i pospremanja. Dovoljno je da se jednom dogovorimo oko menija i rasporeda.</p>
+    <p class="fade-in-up" data-i18n="intro_text">Supa ili potaž, glavno jelo i salata, sve u jednom paketu, spremno za serviranje. Vaš tim dobija svež, izbalansiran ručak, a vi se rešavate organizacije, dostave i pospremanja. Dovoljno je da se jednom dogovorimo oko menija i rasporeda.</p>
+</section>
+
+<!-- FRESH PROMISE -->
+<section class="fresh">
+    <div class="fresh-img fade-in-up">
+        <img src="images/swastha-ceri-paradajz.jpg" alt="Sveži ceri paradajz sa majčinom dušicom, pripremljen jutros u Swastha kuhinji" loading="lazy">
+    </div>
+    <div class="fresh-text fade-in-up">
+        <p class="section-label" data-i18n="fr_label">Naše Obećanje</p>
+        <h2 data-i18n="fr_title">Skuvano tog jutra. Nikad jučerašnja hrana.</h2>
+        <p data-i18n="fr_intro">Kuhinja počinje rano, da bi vaš ručak bio skuvan istog jutra kada stiže u kancelariju. Tako radimo svaki dan, za svaku porudžbinu, bez obzira na to da li hranimo deset ljudi ili ceo sprat.</p>
+        <ul class="fresh-list">
+            <li><span class="fl-num">01</span><div><strong data-i18n="fr1_t">Kuvamo tog jutra</strong><span class="fl-d" data-i18n="fr1_d">Sve što isporučimo skuvano je istog jutra, ne dan ranije.</span></div></li>
+            <li><span class="fl-num">02</span><div><strong data-i18n="fr2_t">Bez ostataka</strong><span class="fl-d" data-i18n="fr2_d">Ne prepakujemo i ne podgrevamo hranu od prethodnog dana. Svaki dan kreće od nule.</span></div></li>
+            <li><span class="fl-num">03</span><div><strong data-i18n="fr3_t">Samo kvalitetne namirnice</strong><span class="fl-d" data-i18n="fr3_d">Sveže povrće, kvalitetno meso i riba, pažljivo birani dobavljači. Bez poluproizvoda.</span></div></li>
+        </ul>
+    </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="audience">
+    <div class="audience-head">
+        <p class="section-label fade-in-up" data-i18n="aud_label">Za Koga Kuvamo</p>
+        <div class="hr-draw"></div>
+        <h2 class="fade-in-up" data-i18n="aud_title">Od velikih kompanija do malih timova.</h2>
+    </div>
+    <div class="audience-grid">
+        <div class="aud-card primary fade-in-up">
+            <p class="aud-tag" data-i18n="aud1_tag">Korporacije</p>
+            <h3 data-i18n="aud1_t">Svakodnevni ručak za veće timove</h3>
+            <p data-i18n="aud1_d">Stalan raspored isporuke, meni koji se smenjuje iz dana u dan i obroci prilagođeni posebnim režimima ishrane u timu.</p>
+            <ul>
+                <li data-i18n="aud1_p1">Dnevna dostava obroka za zaposlene</li>
+                <li data-i18n="aud1_p2">Vegetarijanske, posne i opcije bez alergena</li>
+                <li data-i18n="aud1_p3">Poslovni doručci, sastanci, slave i proslave</li>
+            </ul>
+        </div>
+        <div class="aud-card fade-in-up">
+            <p class="aud-tag" data-i18n="aud2_tag">Male Firme i Kancelarije</p>
+            <h3 data-i18n="aud2_t">Isti kvalitet, bez obzira na veličinu</h3>
+            <p data-i18n="aud2_d">Nije potrebno da budete velika kompanija. Advokatske kancelarije, agencije i manji timovi dobijaju isti obrok, skuvan istog jutra.</p>
+            <ul>
+                <li data-i18n="aud2_p2">Meni i ponuda u roku od 24 sata</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <!-- KEY POINTS -->
@@ -354,12 +445,12 @@
         <div class="point fade-in-up">
             <div class="point-num">01</div>
             <h3 data-i18n="p1_t">Kompletan obrok</h3>
-            <p data-i18n="p1_d">Supa ili potaž, glavno jelo i salata — sve upakovano i pripremljeno istog dana.</p>
+            <p data-i18n="p1_d">Supa ili potaž, glavno jelo i salata, skuvano i upakovano istog jutra.</p>
         </div>
         <div class="point fade-in-up">
-            <div class="point-num">10</div>
-            <h3 data-i18n="p2_t">Minimum porudžbine</h3>
-            <p data-i18n="p2_d">Dostava od minimalno 10 obroka po porudžbini — idealno za timove i kancelarije.</p>
+            <div class="point-num">0</div>
+            <h3 data-i18n="p2_t">Ostataka od juče</h3>
+            <p data-i18n="p2_d">Sve što stigne u vašu kancelariju skuvano je istog jutra, od kvalitetnih namirnica.</p>
         </div>
         <div class="point fade-in-up">
             <div class="point-num">24h</div>
@@ -371,27 +462,23 @@
 
 <!-- MEALS GALLERY -->
 <section class="gallery-section">
-    <!-- NAPOMENA: privremene stock slike — zameni autentičnim fotografijama obroka -->
+    <!-- Autentične fotografije iz Swastha kuhinje -->
     <div class="gallery-grid">
-        <div class="gallery-item g-half fade-in-up">
-            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80" alt="Upakovan korporativni obrok" loading="lazy">
-            <span class="gallery-caption" data-i18n="g1">Obrok Dana</span>
+        <div class="gallery-item g-tall fade-in-up" style="grid-row: span 3;">
+            <img src="images/swastha-tuna-obrok-kutija.jpg" alt="Tuna na žaru sa susamom na pireu od graška, upakovana u kartonske kutije za dostavu u kancelariju" loading="lazy">
+            <span class="gallery-caption" data-i18n="g1">Obrok Dana, Spakovan Jutros</span>
         </div>
-        <div class="gallery-item g-half fade-in-up">
-            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1200&q=80" alt="Sveže pripremljena hrana" loading="lazy">
-            <span class="gallery-caption" data-i18n="g2">Sveže, Tog Dana</span>
+        <div class="gallery-item g-wide fade-in-up" style="grid-row: span 3;">
+            <img src="images/swastha-korporativni-obroci.jpg" alt="Korporativni obroci u Swastha kutijama, rižoto i losos sa šparglama" loading="lazy">
+            <span class="gallery-caption" data-i18n="g2">Obroci za Tim</span>
         </div>
-        <div class="gallery-item g-sq fade-in-up">
-            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=900&q=80" alt="Salata uz obrok" loading="lazy">
-            <span class="gallery-caption" data-i18n="g3">Salata</span>
-        </div>
-        <div class="gallery-item g-sq fade-in-up">
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80" alt="Supa / potaž" loading="lazy">
-            <span class="gallery-caption" data-i18n="g4">Supa / Potaž</span>
+        <div class="gallery-item g-wide fade-in-up">
+            <img src="images/swastha-meni-spread.jpg" alt="Ceo Swastha meni: rižoto, losos, supe, salate i sveže namirnice" loading="lazy">
+            <span class="gallery-caption" data-i18n="g3">Supa, Glavno Jelo, Salata</span>
         </div>
         <div class="gallery-item g-sq fade-in-up">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Glavno jelo" loading="lazy">
-            <span class="gallery-caption" data-i18n="g5">Glavno Jelo</span>
+            <img src="images/swastha-ceri-paradajz.jpg" alt="Ceri paradajz sa majčinom dušicom, pripremljen jutros" loading="lazy">
+            <span class="gallery-caption" data-i18n="g4">Sveže Namirnice</span>
         </div>
     </div>
 </section>
@@ -423,8 +510,8 @@
         <div class="footer-cols">
             <div class="footer-col">
                 <h4 data-i18n="footer_navigate">Navigacija</h4>
-                <a href="production.html" data-i18n="nav_production">Produkcija</a>
                 <a href="corporate.html" data-i18n="nav_corporate">Korporativno</a>
+                <a href="production.html" data-i18n="nav_production">Produkcija</a>
                 <a href="index.html#wellness" data-i18n="nav_wellness">Fitnes</a>
                 <a href="index.html#reference" data-i18n="nav_reference">Reference</a>
                 <a href="blog.html" data-i18n="nav_blog">Blog</a>
@@ -433,20 +520,20 @@
             <div class="footer-col">
                 <h4 data-i18n="footer_connect">Povežite Se</h4>
                 <a href="https://www.instagram.com/swastha_catering/" target="_blank">Instagram</a>
-                <a href="https://wa.me/381692726003" target="_blank">WhatsApp</a>
+                <a href="https://wa.me/38163662827" target="_blank">WhatsApp</a>
                 <a href="mailto:swasthabgd@gmail.com">Email</a>
             </div>
             <div class="footer-col">
                 <h4 data-i18n="footer_reach">Kontaktirajte Nas</h4>
                 <a href="mailto:swasthabgd@gmail.com">swasthabgd@gmail.com</a>
-                <a href="tel:+381692726003">+381 69 272 6003</a>
+                <a href="tel:+38163662827">+381 63 662 827</a>
             </div>
         </div>
     </div>
     <div class="footer-bottom">&copy; 2026 Swastha Catering. <span data-i18n="footer_rights">Sva prava zadržana.</span></div>
 </footer>
 
-<a href="https://wa.me/381692726003?text=Hi%20Swastha!%20I%27d%20like%20to%20inquire%20about%20corporate%20event%20catering." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/38163662827?text=Hi%20Swastha!%20I%27d%20like%20to%20inquire%20about%20corporate%20event%20catering." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
@@ -477,16 +564,31 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 const translations = {
     en: {
         nav_corporate: "Corporate", nav_production: "Production", nav_wellness: "Fitness", nav_reference: "Clients", nav_blog: "Blog", nav_contact: "Contact",
-        hero_tag: "Corporate Catering",
-        hero_title: "Fresh meals, delivered to your office",
-        hero_sub: "Soup, a main course and a salad — prepared and packed the same day. No cooking, no hassle, no compromise on your team's health.",
+        hero_tag: "Catering for Companies &middot; Belgrade",
+        hero_title: "Lunch for your team, cooked this morning",
+        hero_sub: "We cook every meal the same morning we deliver it, from quality ingredients and with no leftovers from the day before. For corporations and small teams alike.",
+        hero_cta: "Request a Proposal",
         intro_label: "How It Works",
         intro_title: "A healthy lunch for the whole team, worry-free.",
-        intro_text: "We prepare and pack every meal the same day — soup or potage, a main course and a salad, all in one package, ready to serve. Your team gets a fresh, balanced lunch, while you skip the organizing, delivery and cleanup. We just agree once on the menu and the schedule.",
-        p1_t: "A complete meal", p1_d: "Soup or potage, a main course and a salad — all packed and prepared the same day.",
-        p2_t: "Minimum order", p2_d: "Delivery starts at 10 meals per order — ideal for teams and offices.",
+        intro_text: "Soup or potage, a main course and a salad, all in one package, ready to serve. Your team gets a fresh, balanced lunch, while you skip the organizing, delivery and cleanup. We just agree once on the menu and the schedule.",
+        fr_label: "Our Promise",
+        fr_title: "Cooked that morning. Never yesterday's food.",
+        fr_intro: "Our kitchen starts early, so your lunch is cooked the same morning it arrives at the office. That is how we work every day, for every order, whether we are feeding ten people or a whole floor.",
+        fr1_t: "Cooked that morning", fr1_d: "Everything we deliver was cooked the same morning, not the day before.",
+        fr2_t: "No leftovers", fr2_d: "We never repack or reheat food from the previous day. Every day starts from scratch.",
+        fr3_t: "Only quality ingredients", fr3_d: "Fresh vegetables, quality meat and fish, carefully chosen suppliers. No semi-finished products.",
+        aud_label: "Who We Cook For",
+        aud_title: "From large companies to small teams.",
+        aud1_tag: "Corporations", aud1_t: "Daily lunch for larger teams",
+        aud1_d: "A steady delivery schedule, a menu that changes from day to day and meals adapted to the dietary needs within your team.",
+        aud1_p1: "Daily meal delivery for employees", aud1_p2: "Vegetarian, fasting and allergen-free options", aud1_p3: "Business breakfasts, meetings, slavas and celebrations",
+        aud2_tag: "Small Companies &amp; Offices", aud2_t: "The same quality, whatever your size",
+        aud2_d: "You do not need to be a big company. Law firms, agencies and smaller teams get the same meal, cooked the same morning.",
+        aud2_p2: "Menu and proposal within 24 hours",
+        p1_t: "A complete meal", p1_d: "Soup or potage, a main course and a salad, cooked and packed the same morning.",
+        p2_t: "Leftovers from yesterday", p2_d: "Everything that arrives at your office was cooked the same morning, from quality ingredients.",
         p3_t: "Quick to set up", p3_d: "Reach out and within 24 hours you get a menu and a proposal tailored to your team.",
-        g1: "Meal of the Day", g2: "Fresh, Same Day", g3: "Salad", g4: "Soup / Potage", g5: "Main Course",
+        g1: "Meal of the Day, Packed This Morning", g2: "Meals for the Team", g3: "Soup, Main Course, Salad", g4: "Fresh Ingredients",
         ref_label: "Client",
         ref_quote: "&ldquo;Daily meals for our office — soup, a main course and a salad, all freshly prepared the same day. The team is happy and lunch is one less thing to worry about.&rdquo;",
         ref_meta: "MSA Law Firm",

@@ -302,6 +302,28 @@
             .footer-top { flex-direction: column; gap: 3rem; }
             .footer-cols { gap: 3rem; flex-wrap: wrap; }
         }
+    
+        /* FRESH PROMISE (Swastha za firme) */
+        .fresh-promise { max-width: 1100px; margin: 0 auto 5rem; padding: 0 3rem; position: relative; z-index: 2; }
+        .fresh-promise-inner {
+            display: grid; grid-template-columns: 220px 1fr; gap: 2.5rem; align-items: center;
+            border: 1px solid var(--border); background: #f6f2ea; padding: 1.6rem;
+        }
+        .fresh-promise-img { aspect-ratio: 1; overflow: hidden; }
+        .fresh-promise-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .fresh-promise-label { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--line-color); margin-bottom: 0.7rem; }
+        .fresh-promise-title { font-family: 'Montserrat', sans-serif; font-size: clamp(1.3rem, 2.6vw, 1.7rem); font-weight: 300; line-height: 1.3; margin-bottom: 0.8rem; }
+        .fresh-promise-text { font-size: 0.95rem; font-weight: 300; line-height: 1.75; color: #5a5550; margin-bottom: 1.2rem; }
+        .fresh-promise-link {
+            display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.72rem; letter-spacing: 0.2em;
+            text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 0.3rem;
+        }
+        .fresh-promise-link:hover { color: var(--line-color); }
+        @media (max-width: 768px) {
+            .fresh-promise { padding: 0 1.5rem; margin-bottom: 3.5rem; }
+            .fresh-promise-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+            .fresh-promise-img { aspect-ratio: 16/10; }
+        }
     </style>
 </head>
 <body>
@@ -369,7 +391,7 @@
 
         <h2 data-i18n="article_h2_3">How Ordering Works, From the First Call to a Daily Routine</h2>
 
-        <p data-i18n="article_p4">Starting is quicker than most companies expect. You tell us how many people you are, roughly what the team likes and any dietary requirements, and within 24 hours you get a menu and a proposal. Delivery starts at 10 meals per order, so the service suits a small team as well as a full floor. After that, the only daily task is the headcount: the number of people in the office tomorrow, confirmed by an agreed time. Everything else, the menu, the delivery window and the packaging, is agreed once and simply happens.</p>
+        <p data-i18n="article_p4">Starting is quicker than most companies expect. You tell us how many people you are, roughly what the team likes and any dietary requirements, and within 24 hours you get a menu and a proposal. The service suits a small team as well as a full floor. After that, the only daily task is the headcount: the number of people in the office tomorrow, confirmed by an agreed time. Everything else, the menu, the delivery window and the packaging, is agreed once and simply happens.</p>
 
         <figure class="article-inline-img">
             <img src="images/swastha-korporativni-obroci.jpg" alt="Individually packed Swastha lunches ready for delivery to an office in Belgrade" loading="lazy">
@@ -466,10 +488,25 @@
     </div>
 </section>
 
+<!-- FRESH PROMISE: Swastha za firme -->
+<section class="fresh-promise">
+    <div class="fresh-promise-inner">
+        <div class="fresh-promise-img">
+            <img src="images/swastha-tuna-obrok-kutija.jpg" alt="Grilled tuna with sesame on a pea puree, packed in kraft boxes for an office lunch delivery" loading="lazy">
+        </div>
+        <div>
+            <div class="fresh-promise-label" data-i18n="fp_label">Swastha for Companies</div>
+            <h2 class="fresh-promise-title" data-i18n="fp_title">Cooked the same morning. Never yesterday's food.</h2>
+            <p class="fresh-promise-text" data-i18n="fp_text">Every meal we deliver is cooked that morning, from carefully chosen, quality ingredients. No leftovers and no reheated food from the day before. For large companies and small teams alike.</p>
+            <a href="corporate.html" class="fresh-promise-link"><span data-i18n="fp_link">Catering for Companies</span> &rarr;</a>
+        </div>
+    </div>
+</section>
+
 <!-- CTA BANNER -->
 <section class="cta-banner">
     <h2 class="cta-banner-title" data-i18n="cta_title">Still Ordering Lunch Thirty Times a Day?</h2>
-    <p class="cta-banner-sub" data-i18n="cta_sub">Tell us how many you are and what you like. We respond within 24 hours with a weekly menu and a proposal for daily hot meals, starting from 10 meals per order.</p>
+    <p class="cta-banner-sub" data-i18n="cta_sub">Tell us how many you are and what you like. We respond within 24 hours with a weekly menu and a proposal for daily hot meals.</p>
     <a href="index.html#contact" class="cta-banner-btn" data-i18n="cta_explore">Request a Quote</a>
 </section>
 
@@ -490,20 +527,20 @@
             <div class="footer-col">
                 <h4 data-i18n="footer_connect">Connect</h4>
                 <a href="https://www.instagram.com/swastha_catering/" target="_blank">Instagram</a>
-                <a href="https://wa.me/381692726003" target="_blank">WhatsApp</a>
+                <a href="https://wa.me/38163662827" target="_blank">WhatsApp</a>
                 <a href="mailto:swasthabgd@gmail.com">Email</a>
             </div>
             <div class="footer-col">
                 <h4 data-i18n="footer_reach">Reach Us</h4>
                 <a href="mailto:swasthabgd@gmail.com">swasthabgd@gmail.com</a>
-                <a href="tel:+381692726003">+381 69 272 6003</a>
+                <a href="tel:+38163662827">+381 63 662 827</a>
             </div>
         </div>
     </div>
     <div class="footer-bottom">&copy; 2026 Swastha Catering. <span data-i18n="footer_rights">All rights reserved.</span></div>
 </footer>
 
-<a href="https://wa.me/381692726003?text=Hi%20Swastha!%20I%27d%20like%20to%20inquire%20about%20corporate%20catering." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/38163662827?text=Hi%20Swastha!%20I%27d%20like%20to%20inquire%20about%20corporate%20catering." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
         <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.072-1.108l-.292-.174-3.024.793.808-2.953-.19-.302A8 8 0 1112 20z"/>
@@ -548,6 +585,10 @@ onScroll();
 // ===== LANGUAGE SWITCH =====
 const translations = {
     sr: {
+        fp_label: "Swastha za Firme",
+        fp_title: "Skuvano tog jutra. Nikad jučerašnja hrana.",
+        fp_text: "Svaki obrok koji isporučujemo kuvamo istog jutra, od pažljivo biranih, kvalitetnih namirnica. Bez ostataka i bez podgrevanja hrane od prethodnog dana. Za velike kompanije i male timove.",
+        fp_link: "Ketering za Firme",
         nav_services: "Usluge", nav_corporate: "Korporativno", nav_production: "Produkcija", nav_blog: "Blog", nav_contact: "Kontakt",
         cat_corporate: "Korporativni Ketering",
         article_date: "11. oktobar 2026.",
@@ -560,7 +601,7 @@ const translations = {
         article_h2_2: "Kuvano Istog Jutra, a ne Dan Ranije",
         article_p3: "Najveća razlika između dnevnih ketering usluga jeste kada se hrana kuva. Obrok skuvan prethodnog popodneva, ohlađen i podgrejan, može da bude potpuno bezbedan, a da ipak ima umoran ukus. Obrok skuvan i spakovan istog jutra ima ukus ručka. Kada firma traži kuvana jela za firme, ovo je ono što zapravo traži, i vredi svaki ketering pitati direktno: u koliko sati se kuva današnji ručak i koliko dugo putuje do nas?",
         article_h2_3: "Kako Ide Naručivanje, od Prvog Poziva do Svakodnevne Rutine",
-        article_p4: "Početak je brži nego što većina firmi očekuje. Kažete nam koliko vas ima, otprilike šta tim voli i da li postoje posebni režimi ishrane, a u roku od 24 sata dobijate meni i ponudu. Dostava kreće od 10 obroka po porudžbini, pa usluga odgovara i malom timu i celom spratu. Posle toga jedini dnevni zadatak je broj ljudi: koliko vas je sutra u kancelariji, potvrđeno do dogovorenog sata. Sve ostalo, meni, termin dostave i pakovanje, dogovara se jednom i jednostavno se dešava.",
+        article_p4: "Početak je brži nego što većina firmi očekuje. Kažete nam koliko vas ima, otprilike šta tim voli i da li postoje posebni režimi ishrane, a u roku od 24 sata dobijate meni i ponudu. Usluga odgovara i malom timu i celom spratu. Posle toga jedini dnevni zadatak je broj ljudi: koliko vas je sutra u kancelariji, potvrđeno do dogovorenog sata. Sve ostalo, meni, termin dostave i pakovanje, dogovara se jednom i jednostavno se dešava.",
         article_caption: "Jedno pakovanje po osobi: supa, glavno jelo i salata, skuvani i spakovani istog jutra.",
         article_h2_4: "Nedeljni Meni, a ne Istih Pet Jela",
         article_p5: "Dnevna usluga opstaje ili propada zbog raznovrsnosti. Istih pet jela u krug ljudi će trpeti mesec dana, a posle toga će im smetati. Dobar nedeljni meni menja se sa sezonom, balansira dane sa mesom, ribom i vegetarijanske dane i šalje se unapred, da ljudi znaju šta ih čeka. Posebni režimi ishrane rešavaju se po osobi, a ne po kancelariji: kolega koji ne jede gluten ili jede samo biljnu hranu treba da dobije svoj obeležen obrok, a ne tanjir iz koga je nešto izvađeno. O tome detaljnije pišemo u vodičima o <a href=\"blog-ketering-alergije-ishrana.html\">alergijama i posebnim režimima ishrane</a> i <a href=\"blog-vegetarijanski-veganski-meniji.html\">vegetarijanskim i veganskim menijima</a>.",
@@ -589,7 +630,7 @@ const translations = {
         rel3_date: "24. april 2026.",
         rel3_title: "Kako Izabrati Pravog Ketering Partnera za Firmu: Vodič za 2026. Godinu",
         cta_title: "Još Uvek Naručujete Ručak Trideset Puta Dnevno?",
-        cta_sub: "Recite nam koliko vas ima i šta volite. U roku od 24 sata šaljemo nedeljni meni i ponudu za dnevne tople obroke, od 10 obroka po porudžbini.",
+        cta_sub: "Recite nam koliko vas ima i šta volite. U roku od 24 sata šaljemo nedeljni meni i ponudu za dnevne tople obroke.",
         cta_explore: "Zatražite Ponudu",
         footer_navigate: "Navigacija",
         footer_connect: "Povežite Se",
